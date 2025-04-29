@@ -9,16 +9,17 @@ export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false)
 
   const backgrounds = [
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/colorful-playground-lunch-time_1048944-11160375.jpg-HiIi064uUj4frEtJgWnxK5JUVDUX7e.jpeg", // Playground image
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2865.jpg-V4GVGRyIwm3Kz89SUrHh6Kpy4dVpJs.jpeg", // Modern buildings image
-    "/placeholder.svg?height=1080&width=1920", // Placeholder as third image
+    "/Purbayan1.webp", 
+    "/Purbayan2.webp", 
+    "/Purbayan3.webp",
+    "/Purbayan4.webp"
   ]
 
   useEffect(() => {
     setIsLoaded(true)
     const interval = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % backgrounds.length)
-    }, 3000) // Change every 3 seconds
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [backgrounds.length])
@@ -28,13 +29,13 @@ export default function HeroSection() {
       {backgrounds.map((bg, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] ${
             currentBg === index ? "opacity-100" : "opacity-0"
           }`}
         >
           <div
-            className={`absolute inset-0 scale-110 transition-transform duration-3000 ${
-              currentBg === index ? "animate-zoom-in" : ""
+            className={`absolute inset-0 ${
+              currentBg === index ? "animate-continuous-zoom" : ""
             }`}
           >
             <Image
@@ -46,19 +47,18 @@ export default function HeroSection() {
               sizes="100vw"
             />
           </div>
-          {/* Overlay to improve text readability */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60"></div>
         </div>
       ))}
 
       <div
-        className={`relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white transition-opacity duration-500 ${
+        className={`relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white transition-opacity duration-1000 ${
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
         <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Purbayan City</h1>
         <p className="text-xl md:text-2xl max-w-2xl mb-8 drop-shadow-md">
-        Modern living spaces designed for comfort and luxury in the heart of Bangladesh.
+          Modern living spaces designed for comfort and luxury in the heart of Bangladesh.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg">Explore Our Spaces</Button>
@@ -70,6 +70,20 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
+
+      <style jsx global>{`
+        @keyframes continuous-zoom {
+          0% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.15);
+          }
+        }
+        .animate-continuous-zoom {
+          animation: continuous-zoom 5000ms linear forwards;
+        }
+      `}</style>
     </section>
   )
 }

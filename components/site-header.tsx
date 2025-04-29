@@ -13,9 +13,9 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
-const components: { title: string; href: string; description: string }[] = [
+const components = [
   {
     title: "Playground Equipment",
     href: "/equipment",
@@ -49,12 +49,51 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export function SiteHeader() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-36 items-center">
+<header className={cn(
+  "sticky top-0 z-50 w-full border-b transition-all duration-300 h-16 bg-white/30 backdrop-blur-md",
+
+)}>
+
+{/* isScrolled
+    ? "h-16 bg-white/30 backdrop-blur-md"
+    : "h-36 bg-background/95" */}
+
+      <div className="container flex h-full items-center transition-all duration-300">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="/PurbayanLogoblack.png" alt="Logo" width={80} height={200} className="h-28 w-36" />
-          
+          {/* {!isScrolled && (
+            <Image
+              src="/PurbayanLogoblack.png"
+              alt="Logo"
+              width={80}
+              height={200}
+              className="h-32 w-36 transition-opacity duration-300"
+            />
+          )} */}
+       <div className="text-lg bg-transparent font-semibold leading-tight flex items-center md:mr-7">
+            <Image
+              src="/Purbayanlogolight.png"
+              alt="Logo"
+              width={80}
+              height={200}
+              className="h-[3.9rem] w-20 transition-opacity duration-300"
+            />
+            <div className="transition-opacity duration-300 uppercase">
+  Purbayan <br />
+  properties ltd.
+</div>
+
+          </div>
         </Link>
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>

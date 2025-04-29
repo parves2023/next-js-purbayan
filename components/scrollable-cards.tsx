@@ -18,39 +18,70 @@ export default function ScrollableCards() {
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    )
+  
+    if (scrollRef.current) {
+      observer.observe(scrollRef.current)
+      scrollRef.current.addEventListener("scroll", checkScrollButtons)
+    }
+  
+    return () => {
+      if (scrollRef.current) {
+        scrollRef.current.removeEventListener("scroll", checkScrollButtons)
+      }
+      observer.disconnect()
+    }
+  }, [])
+  
+  
+
   const cards: ScrollCard[] = [
     {
       title: "Modern Playgrounds",
       description: "Safe and engaging play areas for children of all ages.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/colorful-playground-lunch-time_1048944-11160375.jpg-HiIi064uUj4frEtJgWnxK5JUVDUX7e.jpeg",
+      image: "https://i.ibb.co/6ck6nzqz/slide1.jpg",
     },
     {
       title: "Urban Architecture",
       description: "Contemporary buildings designed for modern living.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2865.jpg-V4GVGRyIwm3Kz89SUrHh6Kpy4dVpJs.jpeg",
+      image: "https://i.ibb.co/1YNghDd0/slide2.jpg",
     },
     {
       title: "Indoor Activities",
       description: "Fun-filled activities for rainy days and all seasons.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://i.ibb.co/XkFNXG7q/slide3.jpg",
     },
     {
       title: "Community Spaces",
       description: "Areas designed for social interaction and community building.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://i.ibb.co/Q7gQPdVg/slide4.jpg",
     },
     {
-      title: "Educational Zones",
-      description: "Spaces that combine learning with play for optimal development.",
-      image: "/placeholder.svg?height=300&width=400",
+      title: "Modern Playgrounds",
+      description: "Safe and engaging play areas for children of all ages.",
+      image: "https://i.ibb.co/6ck6nzqz/slide1.jpg",
     },
     {
-      title: "Nature Integration",
-      description: "Blending natural elements with modern design principles.",
-      image: "/placeholder.svg?height=300&width=400",
+      title: "Urban Architecture",
+      description: "Contemporary buildings designed for modern living.",
+      image: "https://i.ibb.co/1YNghDd0/slide2.jpg",
+    },
+    {
+      title: "Indoor Activities",
+      description: "Fun-filled activities for rainy days and all seasons.",
+      image: "https://i.ibb.co/XkFNXG7q/slide3.jpg",
+    },
+    {
+      title: "Community Spaces",
+      description: "Areas designed for social interaction and community building.",
+      image: "https://i.ibb.co/Q7gQPdVg/slide4.jpg",
     },
   ]
+  
 
   const checkScrollButtons = () => {
     if (scrollRef.current) {
@@ -68,33 +99,6 @@ export default function ScrollableCards() {
       setTimeout(checkScrollButtons, 500)
     }
   }
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      },
-    )
-
-    if (scrollRef.current) {
-      observer.observe(scrollRef.current)
-      scrollRef.current.addEventListener("scroll", checkScrollButtons)
-    }
-
-    return () => {
-      if (scrollRef.current) {
-        scrollRef.current.removeEventListener("scroll", checkScrollButtons)
-      }
-      observer.disconnect()
-    }
-  }, [])
 
   return (
     <section className="py-16 bg-muted/30">
@@ -133,19 +137,10 @@ export default function ScrollableCards() {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {cards.map((card, index) => (
-            <Card key={index} className="flex-shrink-0 w-[280px] md:w-[320px]">
-              <div className="relative h-48 w-full">
+            <Card key={index} className="flex-shrink-0 w-[280px] md:w-[660px]">
+              <div className="relative h-[60vh] w-full">
                 <Image src={card.image || "/placeholder.svg"} alt={card.title} fill className="object-cover" />
               </div>
-              <CardHeader>
-                <CardTitle>{card.title}</CardTitle>
-                <CardDescription>{card.description}</CardDescription>
-              </CardHeader>
-              <CardFooter>
-                <Button variant="outline" className="w-full">
-                  Learn More
-                </Button>
-              </CardFooter>
             </Card>
           ))}
         </div>

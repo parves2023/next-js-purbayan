@@ -8,7 +8,6 @@ export default function Home() {
     <main className="min-h-screen">
       <SiteHeader />
       <HeroSection />
-      <FeatureCards />
       <ScrollableCards />
     </main>
   )
