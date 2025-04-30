@@ -240,7 +240,19 @@ export default function ContactSection() {
             <div className="bg-gray-900 rounded-lg overflow-hidden h-64 relative">
               {/* Replace with an actual map component or iframe */}
               <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
-                <p className="text-gray-400">Map Loading...</p>
+              <div className="relative w-full pb-[66.67%]">
+      <div className="absolute inset-0">
+        <iframe
+          className="w-full h-full"
+          frameBorder="0"
+          scrolling="no"
+          marginHeight={0}
+          marginWidth={0}
+          src="https://maps.google.com/maps?width=600&height=400&hl=en&q=dhaka%2Cbanani&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
               </div>
             </div>
           </div>

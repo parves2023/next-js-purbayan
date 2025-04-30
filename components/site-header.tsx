@@ -139,8 +139,8 @@ export function SiteHeader() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/pricing" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Pricing</NavigationMenuLink>
+              <Link href="/fishing-club" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Fishing Club</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>

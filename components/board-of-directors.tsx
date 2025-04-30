@@ -25,7 +25,7 @@ export default function BoardOfDirectors() {
   const directors: Director[] = [
     {
       id: "director-1",
-      name: "Md. Abdul Rahman",
+      name: "Samsuddin Ahmed",
       title: "Chairman",
       image: "/placeholder.svg?height=400&width=400",
       bio: "With over 30 years of experience in real estate development, Mr. Rahman has led Purbayan Group to become one of the leading developers in Bangladesh.",
