@@ -82,7 +82,7 @@ export function SiteHeader() {
           )} */}
        <div className="text-lg bg-transparent font-semibold leading-tight flex items-center md:mr-7">
             <Image
-              src="/Purbayanlogolight.png"
+              src="https://i.ibb.co/Dfv2YPBN/Purbayanlogolight.webp"
               alt="Logo"
               width={80}
               height={200}
