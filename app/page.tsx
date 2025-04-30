@@ -11,9 +11,9 @@ import ContactSection from "@/components/contact-section"
 
 
 export const metadata: Metadata = {
-  title: "Purbayan City | Premium Land Development in Bangladesh",
+  title: "Purbayan Properties Limited | Premium Land Development in Bangladesh",
   description:
-    "Purbayan City offers premium land development projects, modern living spaces, and exclusive amenities including a fishing club in Bangladesh.",
+    "Purbayan Properties Limited offers premium land development projects, modern living spaces, and exclusive amenities including a fishing club in Bangladesh.",
 }
 
 export default function Home() {

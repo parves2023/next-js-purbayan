@@ -24,7 +24,7 @@ export default function GalleryGrid() {
       type: "image",
       thumbnail: "/placeholder.svg?height=400&width=600",
       src: "/placeholder.svg?height=1200&width=1600",
-      title: "Purbayan City Aerial View",
+      title: "Purbayan Properties Limited Aerial View",
     },
     {
       id: "2",
@@ -38,7 +38,7 @@ export default function GalleryGrid() {
       type: "video",
       thumbnail: "/placeholder.svg?height=400&width=600",
       src: "https://www.example.com/video.mp4", // Replace with actual video URL
-      title: "Purbayan City Tour",
+      title: "Purbayan Properties Limited Tour",
     },
     {
       id: "4",

@@ -10,10 +10,10 @@ import { notFound } from "next/navigation"
 const projects = [
   {
     slug: "purbayan-city-phase-1",
-    title: "Purbayan City Phase 1",
+    title: "Purbayan Properties Limited Phase 1",
     description: "Premium residential plots with modern infrastructure and amenities.",
     fullDescription:
-      "Purbayan City Phase 1 is our flagship residential development offering premium plots in a prime location. The project features modern infrastructure, 24/7 security, landscaped gardens, and a range of community amenities designed for comfortable and luxurious living.",
+      "Purbayan Properties Limited Phase 1 is our flagship residential development offering premium plots in a prime location. The project features modern infrastructure, 24/7 security, landscaped gardens, and a range of community amenities designed for comfortable and luxurious living.",
     image: "/placeholder.svg?height=800&width=1200",
     features: [
       "Premium residential plots",
@@ -40,16 +40,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!project) {
     return {
-      title: "Project Not Found | Purbayan City",
+      title: "Project Not Found | Purbayan Properties Limited",
       description: "The requested project could not be found.",
     }
   }
 
   return {
-    title: `${project.title} | Purbayan City`,
+    title: `${project.title} | Purbayan Properties Limited`,
     description: project.description,
     openGraph: {
-      title: `${project.title} | Purbayan City`,
+      title: `${project.title} | Purbayan Properties Limited`,
       description: project.description,
       images: [
         {
@@ -95,7 +95,7 @@ export default function ProjectPage({ params }: Props) {
 
       <SiteHeader />
 
-      <main className="bg-gray-900 text-white pt-20">
+      <main className="bg-gray-900 text-white ">
         <div className="relative h-[50vh] w-full">
           <Image
             src={project.image || "/placeholder.svg"}

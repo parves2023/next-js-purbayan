@@ -6,8 +6,8 @@ import type { Metadata } from "next"
 import { Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Fishing Club | Purbayan City",
-  description: "Enjoy free fish hunting and family day out at Purbayan City's exclusive fishing club.",
+  title: "Fishing Club | Purbayan Properties Limited",
+  description: "Enjoy free fish hunting and family day out at Purbayan Properties Limited's exclusive fishing club.",
 }
 
 export default function FishingClubPage() {
@@ -27,7 +27,7 @@ export default function FishingClubPage() {
         <section className="relative h-[50vh] w-full">
           <Image
             src="https://i.ibb.co/C5WMK7px/Purbayan2.webp"
-            alt="Fishing Club at Purbayan City"
+            alt="Fishing Club at Purbayan Properties Limited"
             fill
             priority
             className="object-cover"
@@ -203,24 +203,36 @@ export default function FishingClubPage() {
                   </ul>
                 </div>
 
-                <div className="bg-amber-500 rounded-lg p-8 text-center">
-                  <h2 className="text-2xl font-bold mb-6 text-white">যোগাযোগ</h2>
-                  <div className="flex justify-center mb-4">
-                    <Button variant="outline" className="bg-white text-amber-500 hover:bg-gray-100">
-                      <Phone className="mr-2 h-4 w-4" />
-                      <a href="tel:01903573335">01903573335</a>
-                    </Button>
-                  </div>
-                  <div className="flex justify-center mb-6">
-                    <Button variant="outline" className="bg-white text-amber-500 hover:bg-gray-100">
-                      <Phone className="mr-2 h-4 w-4" />
-                      <a href="tel:01321192455">01321192455</a>
-                    </Button>
-                  </div>
-                  <p className="text-white">বাড়ী # ৬০ (দ্বিতীয় তলা), রোড # ৮ ও ৯, ব্লক # এফ, বনানী, ঢাকা</p>
-                </div>
+
+
+
+
               </div>
+
+              
             </div>
+            <div className="bg-gray-800 rounded-lg p-8 text-center mt-10">
+  <h2 className="text-4xl font-bold mb-6 text-amber-500">যোগাযোগ</h2>
+
+  <div className="space-y-4 ">
+    <a href="tel:01903573335">
+      <Button variant="outline" className="w-full mb-1 justify-center bg-white text-amber-500 hover:bg-gray-400">
+        <Phone className="mr-2 h-4 w-4" />
+        01903573335
+      </Button>
+    </a>
+    <a href="tel:01321192455">
+      <Button variant="outline" className="w-full justify-center bg-white text-amber-500 hover:bg-gray-400">
+        <Phone className="mr-2 h-4 w-4" />
+        01321192455
+      </Button>
+    </a>
+  </div>
+
+  <p className="mt-6 text-gray-300">
+    বাড়ী # ৬০ (দ্বিতীয় তলা), রোড # ৮ ও ৯, ব্লক # এফ, বনানী, ঢাকা
+  </p>
+</div>
           </div>
         </section>
 

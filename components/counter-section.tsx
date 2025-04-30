@@ -78,7 +78,7 @@ export default function CounterSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Purbayan City in Numbers</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Purbayan Properties Limited statistics</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Our development features premium residential and commercial units with extensive green and lake areas.
           </p>

@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 mt-4 text-center md:text-left">
-              Purbayan City offers premium land development projects and modern living spaces in Bangladesh.
+              Purbayan Properties Limited offers premium land development projects and modern living spaces in Bangladesh.
             </p>
             <div className="flex justify-center md:justify-start space-x-4 mt-6">
               <Link href="https://facebook.com" className="text-gray-400 hover:text-amber-500 transition-colors">
@@ -145,7 +145,7 @@ export default function Footer() {
                 />
                 <Button
                   type="submit"
-                  className="bg-amber-500 hover:bg-amber-600 text-white w-full flex items-center justify-center"
+                  className="bg-[#f8c927] hover:bg-amber-600 text-black w-full flex items-center justify-center"
                 >
                   See More <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>

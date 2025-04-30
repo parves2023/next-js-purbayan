@@ -61,7 +61,7 @@ export function SiteHeader() {
   }, [])
   return (
 <header className={cn(
-  "sticky top-0 z-50 w-full border-b transition-all duration-300 h-16 bg-white/30 backdrop-blur-md",
+  "sticky top-0 z-50 w-full border-b transition-all duration-300 h-16 bg-[##1f2937] backdrop-blur-md",
 
 )}>
 
@@ -107,7 +107,7 @@ export function SiteHeader() {
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="/"
                       >
-                        <div className="mb-2 mt-4 text-lg font-medium">Welcome to PlayWorld</div>
+                        <div className="mb-2 mt-4 text-lg font-medium">Welcome to Purbayan Properties Ltd</div>
                         <p className="text-sm leading-tight text-muted-foreground">
                           Discover a world of fun, learning, and adventure for children of all ages.
                         </p>
@@ -151,7 +151,7 @@ export function SiteHeader() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button variant="default" className="hidden md:flex">
+          <Button variant="default" className="hidden md:flex bg-[#f8c927] hover:bg-[#fe584e]">
             Register Interest
           </Button>
           <Button variant="outline" size="icon" className="md:hidden">

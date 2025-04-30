@@ -14,6 +14,7 @@ interface Director {
   bio: string
   linkedin?: string
   email?: string
+  phone?: number
 }
 
 export default function BoardOfDirectors() {
@@ -25,19 +26,20 @@ export default function BoardOfDirectors() {
   const directors: Director[] = [
     {
       id: "director-1",
-      name: "Samsuddin Ahmed",
+      name: "Shamsuddin Ahmed",
       title: "Chairman",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "https://thumbs.dreamstime.com/b/passport-document-id-photo-business-man-portrait-concept-young-handsome-stylish-guy-formal-wear-white-background-119717703.jpg",
       bio: "With over 30 years of experience in real estate development, Mr. Rahman has led Purbayan Group to become one of the leading developers in Bangladesh.",
       linkedin: "https://linkedin.com",
       email: "chairman@purbayanbd.com",
+      phone: +8801827588888,
     },
     {
       id: "director-2",
-      name: "Fatima Begum",
-      title: "Managing Director",
-      image: "/placeholder.svg?height=400&width=400",
-      bio: "Ms. Begum oversees all operational aspects of Purbayan Group, ensuring the highest standards of quality and customer satisfaction.",
+      name: "M. A. Khaleque psc",
+      title: "Chief Advisor",
+      image: "https://t4.ftcdn.net/jpg/03/78/43/25/360_F_378432516_6IlKiCLDAqSCGcfc6o8VqWhND51XqfFm.jpg",
+      bio: "Ms. Begum was Ex-Member of Parliament and Additional IG of Police (Retd.)",
       linkedin: "https://linkedin.com",
       email: "md@purbayanbd.com",
     },
@@ -45,7 +47,7 @@ export default function BoardOfDirectors() {
       id: "director-3",
       name: "Kamal Hossain",
       title: "Director of Finance",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "https://thumbs.dreamstime.com/b/passport-photo-laughing-caucasian-man-isolated-white-background-cut-out-passport-photo-laughing-caucasian-man-275801697.jpg",
       bio: "Mr. Hossain brings 20 years of financial expertise to ensure the sustainable growth and financial stability of all Purbayan projects.",
       linkedin: "https://linkedin.com",
       email: "finance@purbayanbd.com",
@@ -54,7 +56,7 @@ export default function BoardOfDirectors() {
       id: "director-4",
       name: "Nasreen Khan",
       title: "Director of Marketing",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "https://st2.depositphotos.com/2783505/8278/i/950/depositphotos_82784040-stock-photo-passport-picture-of-a-cool.jpg",
       bio: "With a background in international marketing, Ms. Khan leads our strategic marketing initiatives and brand development.",
       linkedin: "https://linkedin.com",
       email: "marketing@purbayanbd.com",

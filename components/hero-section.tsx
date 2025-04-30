@@ -56,12 +56,12 @@ export default function HeroSection() {
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Purbayan City</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Purbayan Properties Limited</h1>
         <p className="text-xl md:text-2xl max-w-2xl mb-8 drop-shadow-md">
           Modern living spaces designed for comfort and luxury in the heart of Bangladesh.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg">Explore Our Spaces</Button>
+          <Button className="bg-[#f8c927] hover:bg-[#fe584e] text-black px-8 py-6 text-lg">Explore Our Spaces</Button>
           <Button
             variant="outline"
             className="bg-white/20 hover:bg-white/30 text-white border-white px-8 py-6 text-lg backdrop-blur-sm"

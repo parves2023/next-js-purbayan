@@ -4,9 +4,9 @@ import ContactSection from "@/components/contact-section"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact Us | Purbayan City",
+  title: "Contact Us | Purbayan Properties Limited",
   description:
-    "Get in touch with Purbayan City for inquiries about our premium land development projects and amenities.",
+    "Get in touch with Purbayan Properties Limited for inquiries about our premium land development projects and amenities.",
 }
 
 export default function ContactPage() {

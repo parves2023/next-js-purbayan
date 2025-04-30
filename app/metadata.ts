@@ -3,13 +3,13 @@ import type { Metadata } from "next/types"
 // Default metadata - used as fallback when metadata is not defined in page
 export const defaultMetadata: Metadata = {
   title: {
-    default: "Purbayan City | Premium Land Development in Bangladesh",
-    template: "%s | Purbayan City",
+    default: "Purbayan Properties Limited | Premium Land Development in Bangladesh",
+    template: "%s | Purbayan Properties Limited",
   },
   description:
-    "Purbayan City offers premium land development projects, modern living spaces, and exclusive amenities including a fishing club in Bangladesh.",
+    "Purbayan Properties Limited offers premium land development projects, modern living spaces, and exclusive amenities including a fishing club in Bangladesh.",
   keywords: [
-    "Purbayan City",
+    "Purbayan Properties Limited",
     "land development",
     "real estate Bangladesh",
     "premium plots",
@@ -29,17 +29,17 @@ export const defaultMetadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Purbayan City | Premium Land Development in Bangladesh",
+    title: "Purbayan Properties Limited | Premium Land Development in Bangladesh",
     description:
-      "Purbayan City offers premium land development projects, modern living spaces, and exclusive amenities including a fishing club in Bangladesh.",
+      "Purbayan Properties Limited offers premium land development projects, modern living spaces, and exclusive amenities including a fishing club in Bangladesh.",
     url: "https://purbayanbd.com",
-    siteName: "Purbayan City",
+    siteName: "Purbayan Properties Limited",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Purbayan City",
+        alt: "Purbayan Properties Limited",
       },
     ],
     locale: "en_US",
@@ -58,9 +58,9 @@ export const defaultMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Purbayan City | Premium Land Development in Bangladesh",
+    title: "Purbayan Properties Limited | Premium Land Development in Bangladesh",
     description:
-      "Purbayan City offers premium land development projects, modern living spaces, and exclusive amenities including a fishing club in Bangladesh.",
+      "Purbayan Properties Limited offers premium land development projects, modern living spaces, and exclusive amenities including a fishing club in Bangladesh.",
     images: ["/og-image.jpg"],
   },
   viewport: {
