@@ -9,10 +9,8 @@ export default function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false)
 
   const backgrounds = [
-    "https://i.ibb.co/ksfSCtpS/Purbayan1.webp", 
-    "https://i.ibb.co/C5WMK7px/Purbayan2.webp", 
-    "https://i.ibb.co/4ZpgNW52/Purbayan3.webp",
-    "https://i.ibb.co/MDmQFj6K/Purbayan4.webp"
+    "https://i.ibb.co.com/p6k6Jm83/Purbayan1banner.jpg", 
+    "https://i.ibb.co.com/PvK2H990/Purbayan2banner.jpg", 
   ]
 
   useEffect(() => {
