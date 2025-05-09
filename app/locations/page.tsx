@@ -1,20 +1,20 @@
-
-import Footer from "@/components/footer"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { MapPin } from "lucide-react"
-import type { Metadata } from "next"
-import { SiteHeader } from "@/components/site-header"
+import Footer from "@/components/footer";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { MapPin } from "lucide-react";
+import type { Metadata } from "next";
+import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
   title: "Location | Purbayan Properties Limited",
-  description: "Discover the strategic location of Purbayan Properties Limited and its connectivity to key areas.",
-}
+  description:
+    "Discover the strategic location of Purbayan Properties Limited and its connectivity to key areas.",
+};
 
 export default function LocationPage() {
   return (
     <>
-        <SiteHeader />
+      <SiteHeader />
       <main className="bg-gray-900 text-white ">
         {/* Hero Section */}
         <section className="relative h-[40vh] w-full">
@@ -28,7 +28,9 @@ export default function LocationPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-lg">Our Location</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+              Our Location
+            </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl drop-shadow-md">
               Strategically located for convenience and accessibility
             </p>
@@ -40,15 +42,19 @@ export default function LocationPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-6 text-[#f8c927]">Strategic Location</h2>
+                <h2 className="text-3xl font-bold mb-6 text-[#f8c927]">
+                  Strategic Location
+                </h2>
                 <p className="text-lg text-gray-300 mb-6">
-                  Purbayan Properties Limited is strategically located in one of the most promising areas of Bangladesh, offering
-                  excellent connectivity to major roads, business districts, educational institutions, and healthcare
-                  facilities.
+                  Purbayan Properties Limited is strategically located in one of
+                  the most promising areas of Bangladesh, offering excellent
+                  connectivity to major roads, business districts, educational
+                  institutions, and healthcare facilities.
                 </p>
                 <p className="text-lg text-gray-300 mb-6">
-                  Our development is just a short drive from key urban centers while providing a peaceful and serene
-                  environment away from the hustle and bustle of city life.
+                  Our development is just a short drive from key urban centers
+                  while providing a peaceful and serene environment away from
+                  the hustle and bustle of city life.
                 </p>
                 <div className="flex items-center mb-6">
                   <MapPin className="h-6 w-6 text-[#f8c927] mr-2" />
@@ -56,7 +62,9 @@ export default function LocationPage() {
                     House-35 (5th floor), Road-7, Block-G, Banani, Dhaka.
                   </address>
                 </div>
-                <Button className="bg-[#f8c927] text-black hover:bg-[#fe584e]">Get Directions</Button>
+                <Button className="bg-[#f8c927] text-black hover:bg-yellow-600">
+                  Get Directions
+                </Button>
               </div>
               <div className="h-[500px] w-full rounded-lg overflow-hidden">
                 <iframe
@@ -77,7 +85,9 @@ export default function LocationPage() {
         {/* Connectivity Section */}
         <section className="py-16 bg-gray-800">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#f8c927]">Connectivity & Proximity</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#f8c927]">
+              Connectivity & Proximity
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-gray-900 p-6 rounded-lg">
                 <div className="bg-primary/20 rounded-full p-4 w-16 h-16 flex items-center justify-center mb-4">
@@ -197,5 +207,5 @@ export default function LocationPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

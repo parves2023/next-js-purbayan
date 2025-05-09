@@ -1,32 +1,40 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Script from "next/script"
-import Link from "next/link"
+import { useState } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Script from "next/script";
+import Link from "next/link";
 
 interface Project {
-  id: string
-  title: string
-  description: string
-  image: string
-  category: string
-  status: "completed" | "ongoing" | "upcoming"
-  slug: string
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  status: "completed" | "ongoing" | "upcoming";
+  slug: string;
 }
 
 export default function OurProjects() {
-  const [activeTab, setActiveTab] = useState("all")
+  const [activeTab, setActiveTab] = useState("all");
 
   const projects: Project[] = [
     {
       id: "project-1",
       title: "Purbayan Properties Limited Phase 1",
-      description: "Premium residential plots with modern infrastructure and amenities.",
-      image: "https://images.squarespace-cdn.com/content/v1/56b61d457c65e483ef192c14/5aa740a0-dd9c-4812-9803-86d7a943a07f/IMG_0319e.jpg?format=2500w",
+      description:
+        "Premium residential plots with modern infrastructure and amenities.",
+      image:
+        "https://images.squarespace-cdn.com/content/v1/56b61d457c65e483ef192c14/5aa740a0-dd9c-4812-9803-86d7a943a07f/IMG_0319e.jpg?format=2500w",
       category: "residential",
       status: "completed",
       slug: "purbayan-city-phase-1",
@@ -34,8 +42,10 @@ export default function OurProjects() {
     {
       id: "project-2",
       title: "Purbayan Commercial Hub",
-      description: "State-of-the-art commercial spaces for businesses and retail.",
-      image: "https://www.planradar.com/wp-content/uploads/2018/04/construction-site-1-2.jpg",
+      description:
+        "State-of-the-art commercial spaces for businesses and retail.",
+      image:
+        "https://www.planradar.com/wp-content/uploads/2018/04/construction-site-1-2.jpg",
       category: "commercial",
       status: "completed",
       slug: "purbayan-commercial-hub",
@@ -43,8 +53,10 @@ export default function OurProjects() {
     {
       id: "project-3",
       title: "Purbayan Green Valley",
-      description: "Eco-friendly residential development with lush green surroundings.",
-      image: "https://images.squarespace-cdn.com/content/v1/56b61d457c65e483ef192c14/1582225102776-YV9DTSRAW36QF1JMON0C/3.%2BInsideGarage2%2Bcopy.jpg?format=2500w",
+      description:
+        "Eco-friendly residential development with lush green surroundings.",
+      image:
+        "https://images.squarespace-cdn.com/content/v1/56b61d457c65e483ef192c14/1582225102776-YV9DTSRAW36QF1JMON0C/3.%2BInsideGarage2%2Bcopy.jpg?format=2500w",
       category: "residential",
       status: "ongoing",
       slug: "purbayan-green-valley",
@@ -52,7 +64,8 @@ export default function OurProjects() {
     {
       id: "project-4",
       title: "Purbayan Waterfront",
-      description: "Exclusive waterfront properties with scenic views and premium amenities.",
+      description:
+        "Exclusive waterfront properties with scenic views and premium amenities.",
       image: "https://i.ibb.co/4ZpgNW52/Purbayan3.webp",
       category: "residential",
       status: "upcoming",
@@ -61,7 +74,8 @@ export default function OurProjects() {
     {
       id: "project-5",
       title: "Purbayan Business Park",
-      description: "Modern office spaces designed for productivity and collaboration.",
+      description:
+        "Modern office spaces designed for productivity and collaboration.",
       image: "https://i.ibb.co/4ZpgNW52/Purbayan3.webp",
       category: "commercial",
       status: "ongoing",
@@ -70,15 +84,19 @@ export default function OurProjects() {
     {
       id: "project-6",
       title: "Purbayan Leisure Complex",
-      description: "Recreational facilities including sports, entertainment, and dining options.",
+      description:
+        "Recreational facilities including sports, entertainment, and dining options.",
       image: "https://i.ibb.co/4ZpgNW52/Purbayan3.webp",
       category: "mixed-use",
       status: "completed",
       slug: "purbayan-leisure-complex",
     },
-  ]
+  ];
 
-  const filteredProjects = activeTab === "all" ? projects : projects.filter((project) => project.status === activeTab)
+  const filteredProjects =
+    activeTab === "all"
+      ? projects
+      : projects.filter((project) => project.status === activeTab);
 
   // JSON-LD structured data for projects
   const projectsSchema = {
@@ -92,10 +110,12 @@ export default function OurProjects() {
         name: project.title,
         description: project.description,
         url: `https://purbayanbd.com/projects/${project.slug}`,
-        image: project.image.startsWith("/") ? `https://purbayanbd.com${project.image}` : project.image,
+        image: project.image.startsWith("/")
+          ? `https://purbayanbd.com${project.image}`
+          : project.image,
       },
     })),
-  }
+  };
 
   return (
     <>
@@ -103,19 +123,31 @@ export default function OurProjects() {
         {JSON.stringify(projectsSchema)}
       </Script>
 
-      <section className="py-16 bg-gray-800" id="our-projects" aria-labelledby="projects-heading">
+      <section
+        className="py-16 bg-gray-800"
+        id="our-projects"
+        aria-labelledby="projects-heading"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 id="projects-heading" className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            <h2
+              id="projects-heading"
+              className="text-3xl md:text-4xl font-bold mb-4 text-white"
+            >
               Our Projects
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Discover our portfolio of completed, ongoing, and upcoming development projects that showcase our
-              commitment to quality and innovation.
+              Discover our portfolio of completed, ongoing, and upcoming
+              development projects that showcase our commitment to quality and
+              innovation.
             </p>
           </div>
 
-          <Tabs defaultValue="all" className="w-full" onValueChange={setActiveTab}>
+          <Tabs
+            defaultValue="all"
+            className="w-full"
+            onValueChange={setActiveTab}
+          >
             <div className="flex justify-center mb-8">
               <TabsList className="bg-gray-700">
                 <TabsTrigger value="all" className="text-sm md:text-base">
@@ -168,7 +200,7 @@ export default function OurProjects() {
 
           <div className="text-center mt-12">
             <Link href="/projects">
-              <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg">
+              <Button className="bg-amber-500 hover:bg-yellow-600 text-white px-8 py-6 text-lg">
                 View All Projects
               </Button>
             </Link>
@@ -176,7 +208,7 @@ export default function OurProjects() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
 function ProjectCard({ project }: { project: Project }) {
@@ -184,7 +216,7 @@ function ProjectCard({ project }: { project: Project }) {
     completed: "bg-green-500",
     ongoing: "bg-amber-500",
     upcoming: "bg-blue-500",
-  }
+  };
 
   return (
     <Card className="overflow-hidden bg-gray-900 border-gray-700 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10">
@@ -196,14 +228,20 @@ function ProjectCard({ project }: { project: Project }) {
           className="object-cover transition-transform duration-500 hover:scale-105"
         />
         <div
-          className={`absolute top-4 right-4 ${statusColors[project.status]} text-white text-xs font-bold px-2 py-1 rounded uppercase`}
+          className={`absolute top-4 right-4 ${
+            statusColors[project.status]
+          } text-white text-xs font-bold px-2 py-1 rounded uppercase`}
         >
           {project.status}
         </div>
       </div>
       <CardContent className="p-6">
-        <CardTitle className="text-xl font-bold mb-2 text-white">{project.title}</CardTitle>
-        <CardDescription className="text-gray-300">{project.description}</CardDescription>
+        <CardTitle className="text-xl font-bold mb-2 text-white">
+          {project.title}
+        </CardTitle>
+        <CardDescription className="text-gray-300">
+          {project.description}
+        </CardDescription>
       </CardContent>
       <CardFooter className="p-6 pt-0">
         <Link href={`/projects/${project.slug}`} className="w-full">
@@ -216,5 +254,5 @@ function ProjectCard({ project }: { project: Project }) {
         </Link>
       </CardFooter>
     </Card>
-  )
+  );
 }

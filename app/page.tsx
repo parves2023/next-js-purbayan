@@ -8,6 +8,8 @@ import type { Metadata } from "next"
 import Footer from "@/components/footer"
 import CounterSection from "@/components/counter-section"
 import ContactSection from "@/components/contact-section"
+import WhatsAppButton from "@/components/whatsapp-button"
+import ScrollToTop from "@/components/scroll-to-top"
 
 
 export const metadata: Metadata = {
@@ -30,6 +32,8 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+          <WhatsAppButton />
+              <ScrollToTop />
     </>
   )
 }

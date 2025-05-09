@@ -59,7 +59,7 @@ export default function HeroSection() {
           Modern living spaces designed for comfort and luxury in the heart of Bangladesh.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button className="bg-[#f8c927] hover:bg-[#fe584e] text-black px-8 py-6 text-lg">Explore Our Spaces</Button>
+          <Button className="bg-[#f8c927] hover:bg-yellow-600 text-black px-8 py-6 text-lg">Explore Our Spaces</Button>
           <Button
             variant="outline"
             className="bg-white/20 hover:bg-white/30 text-white border-white px-8 py-6 text-lg backdrop-blur-sm"

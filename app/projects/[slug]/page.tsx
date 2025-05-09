@@ -1,17 +1,18 @@
-import { SiteHeader } from "@/components/site-header"
-import Footer from "@/components/footer"
-import type { Metadata } from "next"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { notFound } from "next/navigation"
+import { SiteHeader } from "@/components/site-header";
+import Footer from "@/components/footer";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 // This would typically come from a database or CMS
 const projects = [
   {
     slug: "purbayan-city-phase-1",
     title: "Purbayan Properties Limited Phase 1",
-    description: "Premium residential plots with modern infrastructure and amenities.",
+    description:
+      "Premium residential plots with modern infrastructure and amenities.",
     fullDescription:
       "Purbayan Properties Limited Phase 1 is our flagship residential development offering premium plots in a prime location. The project features modern infrastructure, 24/7 security, landscaped gardens, and a range of community amenities designed for comfortable and luxurious living.",
     image: "/placeholder.svg?height=800&width=1200",
@@ -28,21 +29,21 @@ const projects = [
     completionDate: "2021",
   },
   // Add other projects here
-]
+];
 
 type Props = {
-  params: { slug: string }
-}
+  params: { slug: string };
+};
 
 // Dynamic metadata generation
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = projects.find((p) => p.slug === params.slug)
+  const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
     return {
       title: "Project Not Found | Purbayan Properties Limited",
       description: "The requested project could not be found.",
-    }
+    };
   }
 
   return {
@@ -53,21 +54,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: project.description,
       images: [
         {
-          url: project.image.startsWith("/") ? `https://purbayanbd.com${project.image}` : project.image,
+          url: project.image.startsWith("/")
+            ? `https://purbayanbd.com${project.image}`
+            : project.image,
           width: 1200,
           height: 630,
           alt: project.title,
         },
       ],
     },
-  }
+  };
 }
 
 export default function ProjectPage({ params }: Props) {
-  const project = projects.find((p) => p.slug === params.slug)
+  const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
-    notFound()
+    notFound();
   }
 
   // JSON-LD structured data for this specific project
@@ -76,7 +79,9 @@ export default function ProjectPage({ params }: Props) {
     "@type": "RealEstateProject",
     name: project.title,
     description: project.fullDescription,
-    image: project.image.startsWith("/") ? `https://purbayanbd.com${project.image}` : project.image,
+    image: project.image.startsWith("/")
+      ? `https://purbayanbd.com${project.image}`
+      : project.image,
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
@@ -87,11 +92,14 @@ export default function ProjectPage({ params }: Props) {
       "@type": "PostalAddress",
       addressLocality: project.location,
     },
-  }
+  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+      />
 
       <SiteHeader />
 
@@ -111,7 +119,10 @@ export default function ProjectPage({ params }: Props) {
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center mb-6">
-              <Link href="/projects" className="text-amber-500 hover:text-amber-400 flex items-center">
+              <Link
+                href="/projects"
+                className="text-amber-500 hover:text-amber-400 flex items-center"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -130,13 +141,17 @@ export default function ProjectPage({ params }: Props) {
               </Link>
             </div>
 
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">{project.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              {project.title}
+            </h1>
 
             <div className="inline-block bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded uppercase mb-6">
               {project.status}
             </div>
 
-            <p className="text-lg text-gray-300 mb-8">{project.fullDescription}</p>
+            <p className="text-lg text-gray-300 mb-8">
+              {project.fullDescription}
+            </p>
 
             <div className="mb-8">
               <h2 className="text-xl font-bold mb-4">Project Features</h2>
@@ -175,8 +190,13 @@ export default function ProjectPage({ params }: Props) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-amber-500 hover:bg-amber-600 text-white">Register Interest</Button>
-              <Button variant="outline" className="border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white">
+              <Button className="bg-amber-500 hover:bg-yellow-600 text-white">
+                Register Interest
+              </Button>
+              <Button
+                variant="outline"
+                className="border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white"
+              >
                 Download Brochure
               </Button>
             </div>
@@ -186,5 +206,5 @@ export default function ProjectPage({ params }: Props) {
 
       <Footer />
     </>
-  )
+  );
 }
