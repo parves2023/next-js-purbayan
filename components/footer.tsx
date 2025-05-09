@@ -151,7 +151,7 @@ export default function Footer() {
                 </Button>
               </div>
               {subscribed && <p className="text-green-500 text-sm">Thank you for subscribing!</p>}
-              <p className="text-gray-400 text-sm">We promise not to spam you</p>
+              
             </form>
           </div>
         </div>

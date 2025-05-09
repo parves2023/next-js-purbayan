@@ -36,7 +36,6 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       setFormStatus({
         type: "error",
@@ -45,16 +44,13 @@ export default function ContactSection() {
       return
     }
 
-    // Here you would typically send the form data to your API
     console.log("Form submitted:", formData)
 
-    // Simulate successful submission
     setFormStatus({
       type: "success",
       message: "Thank you for your message. We'll get back to you soon!",
     })
 
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -63,7 +59,6 @@ export default function ContactSection() {
       message: "",
     })
 
-    // Clear success message after 5 seconds
     setTimeout(() => {
       setFormStatus({
         type: null,
@@ -99,6 +94,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     className="bg-gray-800 border-gray-700 text-white"
                     required
+                    aria-required="true"
                   />
                 </div>
                 <div>
@@ -113,6 +109,7 @@ export default function ContactSection() {
                     onChange={handleChange}
                     className="bg-gray-800 border-gray-700 text-white"
                     required
+                    aria-required="true"
                   />
                 </div>
               </div>
@@ -156,6 +153,7 @@ export default function ContactSection() {
                   rows={5}
                   className="bg-gray-800 border-gray-700 text-white w-full"
                   required
+                  aria-required="true"
                 />
               </div>
 
@@ -164,6 +162,8 @@ export default function ContactSection() {
                   className={`p-4 rounded ${
                     formStatus.type === "success" ? "bg-green-900/50 text-green-300" : "bg-red-900/50 text-red-300"
                   }`}
+                  role="alert"
+                  aria-live="polite"
                 >
                   {formStatus.message}
                 </div>
@@ -171,9 +171,9 @@ export default function ContactSection() {
 
               <Button
                 type="submit"
-                className="bg-amber-500 hover:bg-amber-600 text-white w-full flex items-center justify-center"
+                className="bg-amber-500 hover:bg-amber-600 text-black w-full flex items-center justify-center"
               >
-                Send Message <Send className="ml-2 h-4 w-4" />
+                Send Message <Send className="ml-2 h-4 w-4" aria-hidden="true" />
               </Button>
             </form>
           </div>
@@ -185,82 +185,117 @@ export default function ContactSection() {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-amber-500 rounded-full p-3 mr-4">
-                    <Phone className="h-6 w-6 text-white" />
+                    <Phone className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>
-                    <p className="text-gray-300">01713034079</p>
+                    <p className="text-gray-300">01841 398 560, 01841 011 970</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="bg-amber-500 rounded-full p-3 mr-4">
-                    <Mail className="h-6 w-6 text-white" />
+                    <Mail className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
-                    <p className="text-gray-300">info@purbayanbd.com</p>
+                    <a
+                      href="mailto:info@purbayanbd.com"
+                      className="text-gray-300 hover:text-amber-500 transition-colors"
+                    >
+                      info@purbayanbd.com
+                    </a>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="bg-amber-500 rounded-full p-3 mr-4">
-                    <MapPin className="h-6 w-6 text-white" />
+                    <MapPin className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Address</h4>
-                    <p className="text-gray-300">
-                      House-35 (5th floor), Road-7,
-                      <br />
-                      Block-G, Banani, Dhaka.
-                    </p>
+                    <h4 className="text-lg font-semibold text-white mb-1">Corporate Office</h4>
+                    <address className="text-gray-300 not-italic">
+                      Sumsun Place, 5th Floor, House #35, Road #07, Block #G, Banani, Dhaka -1213
+                    </address>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-gray-900 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-6 text-white">Office Hours</h3>
-              <div className="space-y-4">
+              <h3 className="text-2xl font-bold mb-6 text-white">Office Locations</h3>
+              <div className="space-y-4 text-gray-300">
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-1">Weekdays</h4>
-                  <p className="text-gray-300">Sunday - Thursday: 10AM - 6PM</p>
+                  <h4 className="font-semibold text-white">Corporate Office:</h4>
+                  <p>
+                    Sumsun Place, 5th Floor, House #35, Road #07, Block #G, Banani, Dhaka -1213
+                    <br />
+                    Hotline: 01841 398 560, 01841 011 970
+                  </p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-1">Weekend</h4>
-                  <p className="text-gray-300">Saturday: 10AM - 2PM</p>
+                  <h4 className="font-semibold text-white">Sales Office:</h4>
+                  <p>
+                    House #60, Road #8 & 9, Block #F, Banani, Dhaka-1213
+                    <br />
+                    Hotline: 01806 426 113, 01806 426 114, 01806 426 115, 01806 426 116, 01806 426 118
+                  </p>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-white mb-1">Friday</h4>
-                  <p className="text-gray-300">Closed</p>
+                  <h4 className="font-semibold text-white">Site Office:</h4>
+                  <p>
+                    Purbachal Purbayan City, Gutulia, Rupganj, Narayanganj
+                    <br />
+                    Hotline: 01841 398 560, 01841 011 970
+                  </p>
+                </div>
+                <div>
+                 
                 </div>
               </div>
             </div>
-
-
           </div>
-
         </div>
 
-  <div className="mt-16">
-  <div className="bg-gray-900 rounded-lg overflow-hidden">
-    <div className="relative w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px]">
-      <iframe
-        className="absolute inset-0 w-full h-full"
-        frameBorder="0"
-        scrolling="no"
-        marginHeight={0}
-        marginWidth={0}
-        src="https://maps.google.com/maps?width=600&height=400&hl=en&q=dhaka%2Cbanani&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-        allowFullScreen
-        loading="lazy"
-      ></iframe>
-    </div>
-  </div>
-</div>
 
 
+        {/* Our Site Location */}
+        <div className="mt-12 bg-gray-900 rounded-lg p-8">
+          <h3 className="text-2xl font-bold text-white mb-4">Our Site Location</h3>
+          <p className="text-gray-300 mb-4">
+            Visit our site at Purbachal Purbayan City, Gutulia, Rupganj, Narayanganj.
+          </p>
+          <a
+            href="https://maps.app.goo.gl/WwSyktiMjCMtjPWbA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-amber-500 hover:underline"
+          >
+            View on Google Maps
+          </a>
+        </div>
 
+                {/* Map */}
+        <div className="mt-16">
+          <div className="bg-gray-900 rounded-lg overflow-hidden">
+            <div className="relative w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px]">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight={0}
+                marginWidth={0}
+                src="https://maps.google.com/maps?width=600&height=400&hl=en&q=dhaka%2Cbanani&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                allowFullScreen
+                loading="lazy"
+                title="Purbayan Properties Limited Location Map"
+                aria-label="Map showing Purbayan Properties Limited location in Banani, Dhaka"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        
       </div>
     </section>
   )
