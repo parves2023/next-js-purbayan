@@ -86,9 +86,9 @@ export default function AboutUsPage() {
       />
 
       {/* Hero Section */}
-      <section className="relative h-[40vh] w-full">
+      <section className="relative h-[50vh] w-full">
         <OptimizedImage
-          src="/placeholder.svg?height=800&width=1600"
+          src="https://i.ibb.co/C5WMK7px/Purbayan2.webp"
           alt="About Purbayan Properties Limited"
           fill
           quality={60}

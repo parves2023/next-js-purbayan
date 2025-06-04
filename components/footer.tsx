@@ -1,9 +1,10 @@
 "use client"
 
 import type React from "react"
+import { FaWhatsapp } from "react-icons/fa";
 
 import Link from "next/link"
-import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Twitter, ArrowRight } from "lucide-react"
+import { Phone, Mail, MapPin, Facebook, ArrowRight } from "lucide-react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -35,25 +36,47 @@ export default function Footer() {
               Purbayan Properties Limited offers premium land development projects and modern living spaces in
               Bangladesh.
             </p>
-            {/* social media links */}
-            <div className="flex justify-center items-center md:justify-start space-x-4 mt-6">
-              <Link href="https://facebook.com" className="text-gray-400 hover:text-amber-500 transition-colors">
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              {/* <Link href="https://linkedin.com" className="text-gray-400 hover:text-amber-500 transition-colors">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="https://instagram.com" className="text-gray-400 hover:text-amber-500 transition-colors">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="https://twitter.com" className="text-gray-400 hover:text-amber-500 transition-colors">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Link> */}
-            </div>
+          
+
+{/* social media & contact links */}
+<div className="flex flex-wrap justify-center md:justify-start items-center space-x-4 space-y-2 mt-6 text-gray-400">
+  {/* Facebook */}
+  <Link href="https://facebook.com" className="hover:text-amber-500 transition-colors flex items-center space-x-1">
+    <Facebook size={20} />
+    <span className="sr-only">Facebook</span>
+  </Link>
+
+  {/* WhatsApp */}
+  <Link
+    href="https://api.whatsapp.com/send/?phone=8801841398560&text&type=phone_number&app_absent=0"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-amber-500 transition-colors flex items-center space-x-1"
+  >
+    <FaWhatsapp  size={20} />
+    <span className="sr-only">WhatsApp</span>
+  </Link>
+
+  {/* Phone (click-to-call) */}
+  <Link
+    href="tel:01841398560"
+    className="hover:text-amber-500 transition-colors flex items-center space-x-1"
+  >
+    <Phone size={20} />
+    <span className="sr-only">Call us</span>
+  </Link>
+
+
+  {/* Email */}
+  <Link
+    href="mailto:info@purbayanbd.com"
+    className="hover:text-amber-500 transition-colors flex items-center space-x-1"
+  >
+    <Mail size={20} />
+    <span className="sr-only">Email</span>
+  </Link>
+</div>
+
           </div>
 
           <div>
