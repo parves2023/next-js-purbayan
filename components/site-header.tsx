@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,11 +10,11 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { cn } from "@/lib/utils"
-import React, { useEffect, useState } from "react"
-import { Menu } from "lucide-react"
-import Logo from "./logo"
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import React, { useEffect, useState } from "react";
+import { Menu } from "lucide-react";
+import Logo from "./logo";
 
 const components = [
   {
@@ -47,29 +47,29 @@ const components = [
     href: "/fishing-club",
     description: "Exclusive fishing club with family day out facilities",
   },
-]
+];
 
 export function SiteHeader() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const headerBg = "bg-gray-900 backdrop-blur-md"
+  const headerBg = "bg-gray-900 backdrop-blur-md";
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 h-16",
         headerBg,
-        isScrolled ? "shadow-md" : "",
+        isScrolled ? "shadow-md" : ""
       )}
     >
       {isMobileMenuOpen && (
@@ -82,7 +82,7 @@ export function SiteHeader() {
           <ul className="flex flex-col space-y-2 p-4">
             {[
               { href: "/", label: "Home" },
-              { href: "/about", label: "About Us" },
+              { href: "/about-us", label: "About Us" },
               { href: "/projects", label: "Projects" },
               { href: "/purbayan-city", label: "Purbayan City" },
               { href: "/locations", label: "Locations" },
@@ -102,7 +102,9 @@ export function SiteHeader() {
               </li>
             ))}
             <li className="pt-2">
-              <Button className="w-full bg-[#f8c927] hover:bg-amber-600 text-black">Register Interest</Button>
+              <Button className="w-full bg-[#f8c927] hover:bg-amber-600 text-black">
+                Register Interest
+              </Button>
             </li>
           </ul>
         </div>
@@ -124,16 +126,19 @@ export function SiteHeader() {
                     <NavigationMenuLink asChild>
                       <a
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/about"
+                        href="/about-us"
                       >
-                        <div className="mb-2 mt-4 text-lg font-medium">Welcome to Purbayan Properties Ltd</div>
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          Welcome to Purbayan Properties Ltd
+                        </div>
                         <p className="text-sm leading-tight text-muted-foreground">
-                          Discover premium residential and commercial properties in prime locations.
+                          Discover premium residential and commercial properties
+                          in prime locations.
                         </p>
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/about" title="About Us">
+                  <ListItem href="/about-us" title="About Us">
                     Learn about our mission and values
                   </ListItem>
                   <ListItem href="/locations" title="Locations">
@@ -150,7 +155,11 @@ export function SiteHeader() {
               <NavigationMenuContent>
                 <ul className="grid w-[600px] gap-3 p-4 md:grid-cols-2">
                   {components.map((component) => (
-                    <ListItem key={component.title} title={component.title} href={component.href}>
+                    <ListItem
+                      key={component.title}
+                      title={component.title}
+                      href={component.href}
+                    >
                       {component.description}
                     </ListItem>
                   ))}
@@ -159,18 +168,24 @@ export function SiteHeader() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/purbayan-city" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Purbayan City</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Purbayan City
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/fishing-club" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Fishing Club</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Fishing Club
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Contact
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -197,28 +212,31 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { title: string }>(
-  ({ className, title, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800  focus:bg-accent focus:text-accent-foreground",
-              className,
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    )
-  },
-)
-ListItem.displayName = "ListItem"
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & { title: string }
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800  focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";

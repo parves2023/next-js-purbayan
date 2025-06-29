@@ -233,8 +233,6 @@ export default function ProjectPage({ params }: Props) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </>
   )
 }

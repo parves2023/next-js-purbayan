@@ -1,8 +1,8 @@
-import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://purbayanbd.com"
-  const currentDate = new Date()
+  const baseUrl = "https://purbayanbd.com";
+  const currentDate = new Date();
 
   // Main pages with appropriate priorities
   const mainPages = [
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about-us`,
       lastModified: currentDate,
       changeFrequency: "monthly" as const,
       priority: 0.9,
@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
-  ]
+  ];
 
   // Project pages with appropriate priorities
   const projectSlugs = [
@@ -82,14 +82,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
       changeFrequency: "monthly" as const,
     },
-  ]
+  ];
 
   const projectPages = projectSlugs.map((project) => ({
     url: `${baseUrl}/projects/${project.slug}`,
     lastModified: currentDate,
     changeFrequency: project.changeFrequency,
     priority: project.priority,
-  }))
+  }));
 
   // Category pages
   const categoryPages = [
@@ -123,7 +123,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
-  ]
+  ];
 
-  return [...mainPages, ...projectPages, ...categoryPages]
+  return [...mainPages, ...projectPages, ...categoryPages];
 }

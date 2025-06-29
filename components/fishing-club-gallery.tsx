@@ -16,22 +16,22 @@ export default function FishingClubGallery() {
 
   const galleryImages: GalleryImage[] = [
     {
-      src: "https://i.ibb.co.com/0jJ457w5/Purbayan3.jpg",
+      src: "https://i.ibb.co/spRvGwP0/12.jpg",
       alt: "Fishing Club Main View",
       className: "row-span-2 col-span-1",
     },
     {
-      src: "https://i.ibb.co.com/b5t7vBGB/Purbayan4.jpg",
+      src: "https://i.ibb.co/5gFS98tT/7.jpg",
       alt: "Fishing Club Lake",
       className: "row-span-1 col-span-2",
     },
     {
-      src: "https://i.ibb.co.com/PvK2H990/Purbayan2banner.jpg",
+      src: "https://i.ibb.co/PzWF9T8y/2.jpg",
       alt: "Fishing Activities",
       className: "row-span-1 col-span-1",
     },
     {
-      src: "https://i.ibb.co.com/p6k6Jm83/Purbayan1banner.jpg",
+      src: "https://i.ibb.co/q3kZYgTw/3.jpg",
       alt: "Fishing Club Facilities",
       className: "row-span-1 col-span-1",
     },

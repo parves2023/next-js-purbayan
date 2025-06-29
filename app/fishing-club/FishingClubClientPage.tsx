@@ -22,7 +22,7 @@ export default function FishingClubClientPage() {
           className={`absolute inset-0 transition-opacity duration-500 ${imagesLoaded ? "opacity-100" : "opacity-0"}`}
         >
           <OptimizedImage
-            src="/placeholder.svg?height=800&width=1600"
+            src="https://i.ibb.co/C5WMK7px/Purbayan2.webp"
             alt="Fishing Club at Purbayan Properties Limited"
             fill
             priority

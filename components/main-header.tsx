@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,33 +11,34 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { cn } from "@/lib/utils"
-import React, { useEffect, useState } from "react"
-import { useTheme } from "next-themes"
-import { Menu, X } from "lucide-react"
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import React, { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { Menu, X } from "lucide-react";
 
 export function MainHeader() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const { setTheme } = useTheme()
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { setTheme } = useTheme();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const logoSrc = "https://i.ibb.co/cKrXhpYM/Purbayan-Properties-Limited-Logo-White.webp"
+  const logoSrc =
+    "https://i.ibb.co/cKrXhpYM/Purbayan-Properties-Limited-Logo-White.webp";
 
   return (
     <header
       className={cn(
         "sticky top-0 z-50 w-full border-b transition-all duration-300 h-16 bg-white/30 backdrop-blur-md dark:bg-gray-900/30",
-        isScrolled ? "shadow-md" : "",
+        isScrolled ? "shadow-md" : ""
       )}
     >
       <div className="container flex h-full items-center transition-all duration-300">
@@ -58,28 +59,44 @@ export function MainHeader() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Home
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
+              <Link href="/about-us" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  About Us
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
-                  <ListItem title="Residential Projects" href="/projects?category=residential">
+                  <ListItem
+                    title="Residential Projects"
+                    href="/projects?category=residential"
+                  >
                     Premium residential plots and developments
                   </ListItem>
-                  <ListItem title="Commercial Projects" href="/projects?category=commercial">
+                  <ListItem
+                    title="Commercial Projects"
+                    href="/projects?category=commercial"
+                  >
                     State-of-the-art commercial spaces
                   </ListItem>
-                  <ListItem title="Ongoing Projects" href="/projects?status=ongoing">
+                  <ListItem
+                    title="Ongoing Projects"
+                    href="/projects?status=ongoing"
+                  >
                     See our current developments
                   </ListItem>
-                  <ListItem title="Completed Projects" href="/projects?status=completed">
+                  <ListItem
+                    title="Completed Projects"
+                    href="/projects?status=completed"
+                  >
                     View our successful projects
                   </ListItem>
                 </ul>
@@ -87,27 +104,37 @@ export function MainHeader() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/locations" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Location</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Location
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/fishing-club" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Fishing Club</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Fishing Club
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/gallery" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Gallery</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Gallery
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/faq" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>FAQ</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  FAQ
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contact</NavigationMenuLink>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Contact
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -125,7 +152,11 @@ export function MainHeader() {
             className="md:hidden hover:scale-105 transition-all duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isMobileMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
           </Button>
         </div>
       </div>
@@ -136,7 +167,7 @@ export function MainHeader() {
           <ul className="flex flex-col space-y-2 p-4">
             {[
               { href: "/", label: "Home" },
-              { href: "/about", label: "About Us" },
+              { href: "/about-us", label: "About Us" },
               { href: "/projects", label: "Projects" },
               { href: "/purbayan-city", label: "Purbayan City" },
               { href: "/locations", label: "Location" },
@@ -155,34 +186,39 @@ export function MainHeader() {
               </li>
             ))}
             <li className="pt-2">
-              <Button className="w-full bg-[#f8c927] hover:bg-amber-600 text-black">Register Interest</Button>
+              <Button className="w-full bg-[#f8c927] hover:bg-amber-600 text-black">
+                Register Interest
+              </Button>
             </li>
           </ul>
         </div>
       )}
     </header>
-  )
+  );
 }
 
-const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { title: string }>(
-  ({ className, title, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-              className,
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    )
-  },
-)
-ListItem.displayName = "ListItem"
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & { title: string }
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
