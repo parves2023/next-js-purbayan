@@ -90,6 +90,7 @@ export function SiteHeader() {
               { href: "/gallery", label: "Gallery" },
               { href: "/faq", label: "FAQ" },
               { href: "/contact", label: "Contact" },
+              { href: "/privacy-policy", label: "Privacy Policy" },
             ].map((item) => (
               <li key={item.href}>
                 <Link
@@ -188,6 +189,17 @@ export function SiteHeader() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
+
+
+                        <NavigationMenuItem>
+              <Link href="/privacy-policy" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Privacy Policy
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+
           </NavigationMenuList>
         </NavigationMenu>
 
