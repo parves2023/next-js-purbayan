@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/site-header"
 import HeroSection from "@/components/hero-section"
-import FeatureCards from "@/components/feature-cards"
 import ScrollableCards from "@/components/scrollable-cards"
 import OurProjects from "@/components/our-projects"
 import BoardOfDirectors from "@/components/board-of-directors"
@@ -10,6 +9,7 @@ import CounterSection from "@/components/counter-section"
 import ContactSection from "@/components/contact-section"
 import WhatsAppButton from "@/components/whatsapp-button"
 import ScrollToTop from "@/components/scroll-to-top"
+import PartnerSection from "@/components/partner-section"
 
 
 export const metadata: Metadata = {
@@ -29,6 +29,7 @@ export default function Home() {
         <CounterSection />
         <BoardOfDirectors />
         <ScrollableCards />
+        <PartnerSection />
         <ContactSection />
       </main>
       <Footer />

@@ -18,7 +18,7 @@ export default function AboutUsPage() {
         {/* Hero Section */}
         <section className="relative h-[40vh] w-full">
           <Image
-            src="https://i.ibb.co/ksfSCtpS/Purbayan1.webp"
+            src="https://i.ibb.co.com/p6k6Jm83/Purbayan1banner.jpg"
             alt="About Purbayan Properties Limited"
             fill
             priority
@@ -53,7 +53,7 @@ export default function AboutUsPage() {
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="https://i.ibb.co/MDmQFj6K/Purbayan4.webp"
+                  src="https://i.ibb.co.com/b5t7vBGB/Purbayan4.jpg"
                   alt="Purbayan Properties Office"
                   fill
                   className="object-cover"

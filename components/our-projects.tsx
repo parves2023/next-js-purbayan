@@ -66,7 +66,7 @@ export default function OurProjects() {
       title: "Purbayan Waterfront",
       description:
         "Exclusive waterfront properties with scenic views and premium amenities.",
-      image: "https://i.ibb.co/4ZpgNW52/Purbayan3.webp",
+      image: "https://i.ibb.co.com/HDCjrQQy/purbayan-city-adunik5.png",
       category: "residential",
       status: "upcoming",
       slug: "purbayan-waterfront",
@@ -76,7 +76,7 @@ export default function OurProjects() {
       title: "Purbayan Business Park",
       description:
         "Modern office spaces designed for productivity and collaboration.",
-      image: "https://i.ibb.co/4ZpgNW52/Purbayan3.webp",
+      image: "https://i.ibb.co.com/jv7x3cLS/CLUB-HOUSE.png",
       category: "commercial",
       status: "ongoing",
       slug: "purbayan-business-park",
@@ -86,7 +86,7 @@ export default function OurProjects() {
       title: "Purbayan Leisure Complex",
       description:
         "Recreational facilities including sports, entertainment, and dining options.",
-      image: "https://i.ibb.co/4ZpgNW52/Purbayan3.webp",
+      image: "https://i.ibb.co.com/LXFgpy35/DUPLEX-ZONE.png",
       category: "mixed-use",
       status: "completed",
       slug: "purbayan-leisure-complex",

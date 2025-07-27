@@ -40,10 +40,7 @@ export default function Footer() {
     }
   };
 
-  const logoSrc =
-    theme === "dark"
-      ? "https://i.ibb.co/cKrXhpYM/Purbayan-Properties-Limited-Logo-White.webp"
-      : "https://i.ibb.co/NgNThXsZ/Purbayan-Properties-Limited-Logo.webp";
+  const logoSrc = "https://i.ibb.co/cKrXhpYM/Purbayan-Properties-Limited-Logo-White.webp";
 
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
@@ -54,7 +51,7 @@ export default function Footer() {
               href="/"
               className="flex flex-col items-center md:items-start mb-4"
             >
-              <div className="relative h-16 w-48">
+              <div className="relative h-32 w-60">
                 <Image
                   src={logoSrc || "/placeholder.svg"}
                   alt="Purbayan Properties Limited Logo"
@@ -175,8 +172,8 @@ export default function Footer() {
               </li>
               <li className="pt-4">
                 <h4 className="text-white font-semibold mb-2">Office Hour</h4>
-                <p className="text-gray-400">Sunday - Thursday 10AM - 6PM</p>
-                <p className="text-gray-400">Saturday 10AM - 2PM</p>
+                {/* <p className="text-gray-400">Sunday - Thursday 10AM - 6PM</p> */}
+                <p className="text-gray-400">Friday - Closed</p>
               </li>
             </ul>
           </div>

@@ -19,7 +19,7 @@ export default function LocationPage() {
         {/* Hero Section */}
         <section className="relative h-[40vh] w-full">
           <Image
-            src="https://i.ibb.co/4ZpgNW52/Purbayan3.webp"
+            src="https://i.ibb.co.com/0jJ457w5/Purbayan3.jpg"
             alt="Purbayan Properties Limited Location"
             fill
             priority
