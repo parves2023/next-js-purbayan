@@ -6,7 +6,7 @@ import { Typewriter } from "@/components/ui/typewriter"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import Banner1 from "@/public/banner1.png"
+// import Banner1 from "@/public/banner1.png"
 import Banner2 from "@/public/banner2.png"
 import Banner3 from "@/public/banner3.png"
 
@@ -17,16 +17,16 @@ export default function HeroSection() {
 
   // Use actual banner images
   const backgrounds = [
+    // {
+    //   src: Banner1,
+    //   alt: "Purbayan Properties Banner 1",
+    // },
     {
-      src: Banner1,
-      alt: "Purbayan Properties Banner 1",
-    },
-    {
-      src: Banner2,
+      src: Banner3,
       alt: "Purbayan Properties Banner 2",
     },
     {
-      src: Banner3,
+      src: Banner2,
       alt: "Purbayan Properties Banner 3",
     },
   ]

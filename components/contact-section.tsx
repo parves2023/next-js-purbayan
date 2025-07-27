@@ -285,7 +285,7 @@ export default function ContactSection() {
                 scrolling="no"
                 marginHeight={0}
                 marginWidth={0}
-                src="https://maps.google.com/maps?width=600&height=400&hl=en&q=dhaka%2Cbanani&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3649.482384060961!2d90.6037728!3d23.8369986!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37543592cc6286c7%3A0x57c3dbbb6b2bb37b!2sPurbayan%20City!5e0!3m2!1sen!2sbd!4v1746803052087!5m2!1sen!2sbd"
                 allowFullScreen
                 loading="lazy"
                 title="Purbayan Properties Limited Location Map"
