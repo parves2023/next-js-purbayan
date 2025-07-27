@@ -13,7 +13,7 @@ interface Director {
 const directors: Director[] = [
   {
     id: "1",
-    name: "Shamsuddin Ahmedd",
+    name: "Shamsuddin Ahmed",
     title: "Chairman",
     image: "https://i.ibb.co/tTnHgvdY/chairman.jpg",
   },
