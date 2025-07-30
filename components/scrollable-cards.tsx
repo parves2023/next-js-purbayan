@@ -17,48 +17,104 @@ export default function ScrollableCards() {
   })
   const [isVisible, setIsVisible] = useState(false)
 
-  const cards: CardData[] = [
-    {
-      title: "Elegant Residences",
-      description: "Crafted for comfort and luxury in every detail.",
-      image: "https://i.ibb.co/zWF0sZpM/purbayan-slider-18.jpg",
-    },
-    {
-      title: "Scenic Neighborhoods",
-      description: "Where nature meets modern living.",
-      image: "https://i.ibb.co/cc5FBkQ5/purbayan-slider-19.jpg",
-    },
-    {
-      title: "Open Green Spaces",
-      description: "Breathe in the serenity of well-planned landscapes.",
-      image: "https://i.ibb.co/nNmsZKQK/purbayan-slider-20.jpg",
-    },
-    {
-      title: "Urban Excellence",
-      description: "Modernity redefined through thoughtful design.",
-      image: "https://i.ibb.co/LXJ5nyCq/purbayan-slider-21.jpg",
-    },
-    {
-      title: "Smart Architecture",
-      description: "Designed for smarter living and sustainability.",
-      image: "https://i.ibb.co/LXF6SDxS/purbayan-slider-1.jpg",
-    },
-    {
-      title: "Family-Friendly Living",
-      description: "A perfect blend of community and privacy.",
-      image: "https://i.ibb.co/q3STQQ65/purbayan-slider-2.jpg",
-    },
-    {
-      title: "Vibrant Lifestyle",
-      description: "Live where life feels like a vacation.",
-      image: "https://i.ibb.co/WvbgRpmB/purbayan-slider-3.jpg",
-    },
-    {
-      title: "Night View Brilliance",
-      description: "Experience city lights in their full glory.",
-      image: "https://i.ibb.co/s9Kvb4Km/purbayan-slider-4.jpg",
-    },
-  ]
+const cards: CardData[] = [
+  {
+    title: "Scenic Neighborhoods",
+    description: "Where nature meets modern living.",
+    image: "https://i.ibb.co/cc5FBkQ/purbayan-slider-19.jpg",
+  },
+  {
+    title: "Elegant Residences",
+    description: "Crafted for comfort and luxury in every detail.",
+    image: "https://i.ibb.co/zWF0sZp/purbayan-slider-18.jpg",
+  },
+  {
+    title: "Open Green Spaces",
+    description: "Breathe in the serenity of well-planned landscapes.",
+    image: "https://i.ibb.co/nNmsZKK/purbayan-slider-20.jpg",
+  },
+  {
+    title: "Urban Excellence",
+    description: "Modernity redefined through thoughtful design.",
+    image: "https://i.ibb.co/LXJ5nyC/purbayan-slider-21.jpg",
+  },
+  {
+    title: "Smart Architecture",
+    description: "Designed for smarter living and sustainability.",
+    image: "https://i.ibb.co/LXF6SDx/purbayan-slider-1.jpg",
+  },
+  {
+    title: "Family-Friendly Living",
+    description: "A perfect blend of community and privacy.",
+    image: "https://i.ibb.co/q3STQQ6/purbayan-slider-2.jpg",
+  },
+  {
+    title: "Vibrant Lifestyle",
+    description: "Live where life feels like a vacation.",
+    image: "https://i.ibb.co/WvbgRpm/purbayan-slider-3.jpg",
+  },
+  {
+    title: "Night View Brilliance",
+    description: "Experience city lights in their full glory.",
+    image: "https://i.ibb.co/s9Kvb4K/purbayan-slider-4.jpg",
+  },
+  {
+    title: "Architectural Harmony",
+    description: "Timeless beauty with functional spaces.",
+    image: "https://i.ibb.co/zjWrNJX/purbayan-slider-5.jpg",
+  },
+  {
+    title: "Luxury Interiors",
+    description: "Crafted spaces that reflect elegance.",
+    image: "https://i.ibb.co/Ps5d0Jq/purbayan-slider-6.jpg",
+  },
+  {
+    title: "Leisure Gardens",
+    description: "Nature-inspired relaxation zones.",
+    image: "https://i.ibb.co/4g4v31x/purbayan-slider-8.jpg",
+  },
+  {
+    title: "Modern Blocks",
+    description: "Built with precision and purpose.",
+    image: "https://i.ibb.co/nN6mNgt/purbayan-slider-9.jpg",
+  },
+  {
+    title: "Comfort Redefined",
+    description: "Homes that speak warmth and comfort.",
+    image: "https://i.ibb.co/6RCjwxg/purbayan-slider-11.jpg",
+  },
+  {
+    title: "Balanced Living",
+    description: "Every day feels elevated and fulfilling.",
+    image: "https://i.ibb.co/HfBjJpH/purbayan-slider-12.jpg",
+  },
+  {
+    title: "Space Utilization",
+    description: "Design that enhances your daily life.",
+    image: "https://i.ibb.co/0bxSLcR/purbayan-slider-13.jpg",
+  },
+  {
+    title: "Artistic Ambiance",
+    description: "A lifestyle infused with creativity.",
+    image: "https://i.ibb.co/wNgwYLv/purbayan-slider-14.jpg",
+  },
+  {
+    title: "Serene Corners",
+    description: "Find peace within your own walls.",
+    image: "https://i.ibb.co/JR7bkv9/purbayan-slider-15.jpg",
+  },
+  {
+    title: "Modern Lifestyle",
+    description: "Live the new definition of smart homes.",
+    image: "https://i.ibb.co/TDzvbhz/purbayan-slider-16.jpg",
+  },
+  {
+    title: "Sunset Glow",
+    description: "Golden hour reflections in your sanctuary.",
+    image: "https://i.ibb.co/F4WKVnc/purbayan-slider-17.jpg",
+  },
+];
+
 
   useEffect(() => {
     if (inView) {

@@ -68,7 +68,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="py-16 bg-gray-800">
+    <section className="py-20 bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Contact Us</h2>
@@ -76,6 +76,8 @@ export default function ContactSection() {
             Have questions about our projects or interested in learning more? Get in touch with our team.
           </p>
         </div>
+
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-gray-900 rounded-lg p-8">
@@ -178,102 +180,100 @@ export default function ContactSection() {
             </form>
           </div>
 
-          <div className="space-y-8">
-            <div className="bg-gray-900 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-6 text-white">Contact Information</h3>
 
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-amber-500 rounded-full p-3 mr-4">
-                    <Phone className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>
-                    <p className="text-gray-300">01841 398 560, 01841 011 970</p>
-                  </div>
-                </div>
+{/* Contact Information */}
+<div className="space-y-8">
+  <div className="bg-gray-900 rounded-lg p-8">
+    <h3 className="text-2xl font-bold mb-6 text-white">Contact Information</h3>
 
-                <div className="flex items-start">
-                  <div className="bg-amber-500 rounded-full p-3 mr-4">
-                    <Mail className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
-                    <a
-                      href="mailto:info@purbayanbd.com"
-                      className="text-gray-300 hover:text-amber-500 transition-colors"
-                    >
-                      info@purbayanbd.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-amber-500 rounded-full p-3 mr-4">
-                    <MapPin className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Corporate Office</h4>
-                    <address className="text-gray-300 not-italic">
-                      Sumsun Place, 5th Floor, House #35, Road #07, Block #G, Banani, Dhaka -1213
-                    </address>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-900 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-6 text-white">Office Locations</h3>
-              <div className="space-y-4 text-gray-300">
-                <div>
-                  <h4 className="font-semibold text-white">Corporate Office:</h4>
-                  <p>
-                    Sumsun Place, 5th Floor, House #35, Road #07, Block #G, Banani, Dhaka -1213
-                    <br />
-                    Hotline: 01841 398 560, 01841 011 970
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Sales Office:</h4>
-                  <p>
-                    House #60, Road #8 & 9, Block #F, Banani, Dhaka-1213
-                    <br />
-                    Hotline: 01806 426 113, 01806 426 114, 01806 426 115, 01806 426 116, 01806 426 118
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Site Office:</h4>
-                  <p>
-                    Purbachal Purbayan City, Gutulia, Rupganj, Narayanganj
-                    <br />
-                    Hotline: 01841 398 560, 01841 011 970
-                  </p>
-                </div>
-                <div>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="space-y-6">
+      <div className="flex items-start">
+        <div className="bg-amber-500 rounded-full p-3 mr-4">
+          <Phone className="h-6 w-6 text-white" aria-hidden="true" />
         </div>
-
-
-
-        {/* Our Site Location */}
-        <div className="mt-12 bg-gray-900 rounded-lg p-8">
-          <h3 className="text-2xl font-bold text-white mb-4">Our Site Location</h3>
-          <p className="text-gray-300 mb-4">
-            Visit our site at Purbachal Purbayan City, Gutulia, Rupganj, Narayanganj.
+        <div>
+          <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>
+          <p className="text-gray-300">
+            Bangladesh: +880 1806-426117 <br />
+            United Kingdom: +44 7795 082404
           </p>
+        </div>
+      </div>
+
+      <div className="flex items-start">
+        <div className="bg-amber-500 rounded-full p-3 mr-4">
+          <Mail className="h-6 w-6 text-white" aria-hidden="true" />
+        </div>
+        <div>
+          <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
           <a
-            href="https://maps.app.goo.gl/WwSyktiMjCMtjPWbA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-amber-500 hover:underline"
+            href="mailto:info@purbayanbd.com"
+            className="text-gray-300 hover:text-amber-500 transition-colors"
           >
-            View on Google Maps
+            info@purbayanbd.com
           </a>
         </div>
+      </div>
+
+      <div className="flex items-start">
+        <div className="bg-amber-500 rounded-full p-3 mr-4">
+          <MapPin className="h-6 w-6 text-white" aria-hidden="true" />
+        </div>
+        <div>
+          <h4 className="text-lg font-semibold text-white mb-1">Head Office</h4>
+          <address className="text-gray-300 not-italic">
+            House #35 (5th Floor), Road #7, Block #G, Banani, Dhaka
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Office Locations */}
+  <div className="bg-gray-900 rounded-lg p-8">
+    <h3 className="text-2xl font-bold mb-6 text-white">Office Locations</h3>
+    <div className="space-y-4 text-gray-300">
+      <div>
+        <h4 className="font-semibold text-white">Head Office:</h4>
+        <p>
+          House #35 (5th Floor), Road #7, Block #G, Banani, Dhaka
+          <br />
+          Phone: +880 1806-426117
+        </p>
+      </div>
+      <div>
+        <h4 className="font-semibold text-white">Sales Office:</h4>
+        <p>
+          House #60 (1st Floor), Road #8 & 9, Block #F, Banani, Dhaka
+        </p>
+      </div>
+      <div>
+        <h4 className="font-semibold text-white">Site Office:</h4>
+        <p>
+          Purbayan City, Purbachal, Rupgonj (Gutulia)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Our Site Location */}
+  <div className="mt-12 bg-gray-900 rounded-lg p-8">
+    <h3 className="text-2xl font-bold text-white mb-4">Our Site Location</h3>
+    <p className="text-gray-300 mb-4">
+      Visit our site at Purbayan City, Purbachal, Rupganj (Gutulia), Narayanganj.
+    </p>
+    <a
+      href="https://maps.app.goo.gl/WwSyktiMjCMtjPWbA"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-amber-500 hover:underline"
+    >
+      View on Google Maps
+    </a>
+  </div>
+</div>
+</div>
+
 
                 {/* Map */}
         <div className="mt-16">

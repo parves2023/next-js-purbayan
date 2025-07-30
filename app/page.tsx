@@ -49,39 +49,38 @@ export default function Home() {
      
    
 
-      <section id="about-section" className="py-16">
-    
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Welcome to Purbayan Properties Limited</h2>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto text-center mb-8">
-            Purbayan Properties Limited is a premier real estate developer in Bangladesh, committed to creating
-            exceptional residential and commercial spaces that enhance quality of life and provide excellent investment
-            opportunities. With decades of experience and a commitment to quality, we deliver projects that stand the
-            test of time.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-bold mb-3 text-amber-500">Quality Construction</h3>
-              <p className="text-gray-300">
-                We use premium materials and adhere to international construction standards to ensure durability and
-                safety.
-              </p>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-bold mb-3 text-amber-500">Prime Locations</h3>
-              <p className="text-gray-300">
-                Our properties are strategically located in areas with excellent connectivity and growth potential.
-              </p>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-bold mb-3 text-amber-500">Customer Satisfaction</h3>
-              <p className="text-gray-300">
-                We prioritize customer needs and provide transparent, hassle-free property buying experiences.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+<section id="about-section" className="py-16">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-white">
+      Welcome to Purbayan City — 500 Acres of Visionary Living
+    </h2>
+    <p className="text-lg text-gray-300 max-w-4xl mx-auto text-center mb-8">
+      Crafted by Purbayan Properties Limited, Purbayan City is not just a residential development — it's a revolution in modern, sustainable urban living. Near RAJUK Purbachal New Town and just 30 minutes from Kuril, this eco-conscious township offers rare connectivity, thoughtful design, and community-first planning.
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <div className="bg-gray-800 p-6 rounded-lg text-center">
+        <h3 className="text-xl font-bold mb-3 text-amber-500">Master-Planned Township</h3>
+        <p className="text-gray-300">
+          Spread across 500 acres with Blocks A–D, government roads, metro rail links, and just 20 plots left in Block A — Purbayan City is your gateway to modern living.
+        </p>
+      </div>
+      <div className="bg-gray-800 p-6 rounded-lg text-center">
+        <h3 className="text-xl font-bold mb-3 text-amber-500">Nature Meets Innovation</h3>
+        <p className="text-gray-300">
+          Eco-conscious design with green corridors, airflow-focused layouts, and lush breathing spaces — for a life reconnected with nature.
+        </p>
+      </div>
+      <div className="bg-gray-800 p-6 rounded-lg text-center">
+        <h3 className="text-xl font-bold mb-3 text-amber-500">Future-Ready Investment</h3>
+        <p className="text-gray-300">
+          Metro rail access, 5-minute Dhaka–Sylhet Highway link, and rising nearby landmarks make this a smart and secure investment for your future.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <Suspense fallback={<div className="h-96 bg-gray-800 animate-pulse"></div>}>
          
