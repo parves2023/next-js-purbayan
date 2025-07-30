@@ -1,5 +1,4 @@
 import { SiteHeader } from "@/components/site-header"
-import Footer from "@/components/footer"
 import type { Metadata } from "next"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -15,7 +14,7 @@ const projects = [
     description: "Premium residential plots with modern infrastructure and amenities.",
     fullDescription:
       "Purbayan Properties Limited Phase 1 is our flagship residential development offering premium plots in a prime location. The project features modern infrastructure, 24/7 security, landscaped gardens, and a range of community amenities designed for comfortable and luxurious living.",
-    image: "/placeholder.svg?height=800&width=1200",
+    image: "https://i.ibb.co/LXF6SDx/purbayan-slider-1.jpg?height=800&width=1200",
     features: [
       "Premium residential plots",
       "Modern infrastructure",

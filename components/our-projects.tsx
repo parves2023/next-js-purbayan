@@ -27,7 +27,7 @@ export default function OurProjects() {
       description: "Premium residential plots with modern infrastructure and amenities.",
       image: "/CENTRAL-PARK-project1.PNG",
       category: "residential",
-      status: "completed",
+      status: "upcoming",
       slug: "purbayan-city-phase-1",
     },
     {
@@ -36,7 +36,7 @@ export default function OurProjects() {
       description: "State-of-the-art commercial spaces for businesses and retail.",
       image: "/CLUB-HOUSE-project2.PNG",
       category: "commercial",
-      status: "completed",
+      status: "upcoming",
       slug: "purbayan-commercial-hub",
     },
     {
@@ -45,7 +45,7 @@ export default function OurProjects() {
       description: "Eco-friendly residential development with lush green surroundings.",
       image: "/DUPLEX-ZONE-project3.PNG",
       category: "residential",
-      status: "ongoing",
+      status: "upcoming",
       slug: "purbayan-green-valley",
     },
     {
@@ -63,7 +63,7 @@ export default function OurProjects() {
       description: "Modern office spaces designed for productivity and collaboration.",
       image: "/purbayan-city-adunik4-project5.PNG",
       category: "commercial",
-      status: "ongoing",
+      status: "upcoming",
       slug: "purbayan-business-park",
     },
     {
@@ -72,7 +72,7 @@ export default function OurProjects() {
       description: "Recreational facilities including sports, entertainment, and dining options.",
       image: "/purbayan-city-adunik5-project6.PNG",
       category: "mixed-use",
-      status: "completed",
+      status: "upcoming",
       slug: "purbayan-leisure-complex",
     },
   ]
