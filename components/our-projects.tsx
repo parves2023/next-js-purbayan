@@ -35,7 +35,7 @@ const projects: Project[] = [
     image: "/DUPLEX-ZONE-project3.PNG",
     category: "residential",
     status: "upcoming",
-    slug: "purbayan-green-valley",
+     slug: "purbayan-city-duplex",
   },
   {
     id: "project-2",
@@ -45,7 +45,7 @@ const projects: Project[] = [
     image: "https://i.ibb.co/d4chkYcZ/Destination-Wedding-Resort.jpg",
     category: "residential",
     status: "upcoming",
-    slug: "purbayan-green-valley",
+    slug: "purbayan-wedding",
   },
   {
     id: "project-3",
@@ -55,7 +55,7 @@ const projects: Project[] = [
     image: "https://i.ibb.co/HDQS44Qr/SUPER.jpg",
     category: "residential",
     status: "upcoming",
-    slug: "purbayan-green-valley",
+    slug: "purbayan-pyramid",
   },
   {
     id: "project-4",
@@ -65,7 +65,7 @@ const projects: Project[] = [
     image: "/CENTRAL-PARK-project1.PNG",
     category: "residential",
     status: "upcoming",
-    slug: "purbayan-city-phase-1",
+    slug: "purbayan-city-park",
   },
   {
     id: "project-5",
@@ -75,7 +75,7 @@ const projects: Project[] = [
     image: "https://i.ibb.co/Cph9zWgs/Purbayan-City-Football-turf.jpg",
     category: "commercial",
     status: "upcoming",
-    slug: "PURBAYAN-FOOTBALL-PARK",
+    slug: "purbayan-football-turf",
   },
   {
     id: "project-6",
@@ -85,7 +85,7 @@ const projects: Project[] = [
     image: "https://i.ibb.co/9kQBS6H3/Library-Coffee-Shop.jpg",
     category: "commercial",
     status: "upcoming",
-    slug: "PURBAYAN-FOOTBALL-PARK",
+    slug: "PURBAYAN-Coffee",
   },
   {
     id: "project-7",

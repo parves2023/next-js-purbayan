@@ -9,72 +9,191 @@ import Script from "next/script"
 // This would typically come from a database or CMS
 const projects = [
   {
-    slug: "purbayan-city-phase-1",
-    title: "Purbayan Properties Limited Phase 1",
-    description: "Premium residential plots with modern infrastructure and amenities.",
+    slug: "purbayan-city-duplex",
+    title: "Purbayan City Duplex Zone",
+    description:
+      "A modern residential zone featuring stylish duplex houses designed for family living.",
     fullDescription:
-      "Purbayan Properties Limited Phase 1 is our flagship residential development offering premium plots in a prime location. The project features modern infrastructure, 24/7 security, landscaped gardens, and a range of community amenities designed for comfortable and luxurious living.",
-    image: "https://i.ibb.co/LXF6SDx/purbayan-slider-1.jpg?height=800&width=1200",
+      "The Purbayan City Duplex Zone offers elegant and spacious duplex homes designed to accommodate modern families. Surrounded by lush greenery and equipped with essential utilities, this zone promises a premium residential lifestyle with privacy, comfort, and eco-conscious planning.",
+    image: "/DUPLEX-ZONE-project3.PNG",
     features: [
-      "Premium residential plots",
-      "Modern infrastructure",
-      "24/7 security",
-      "Landscaped gardens",
-      "Community center",
-      "Wide roads and walkways",
+      "Spacious duplex houses",
+      "Eco-friendly layout",
+      "Private garden space",
+      "Modern design & interiors",
+      "Secure gated community",
+      "Easy access to main road",
     ],
-    status: "completed",
+    status: "upcoming",
     location: "Dhaka, Bangladesh",
-    completionDate: "2021",
+    completionDate: "2026",
   },
-  // Add other projects here
-]
+  {
+      slug: "purbayan-wedding",
+    title: "Purbayan City Destination Wedding Project",
+    description:
+      "A luxurious venue tailored for unforgettable destination weddings.",
+    fullDescription:
+      "The Destination Wedding Project at Purbayan City is built to host grand weddings and celebrations amidst nature. With landscaped gardens, event halls, and luxury accommodations, it's the ideal venue for memorable destination weddings and cultural events.",
+    image: "https://i.ibb.co/d4chkYcZ/Destination-Wedding-Resort.jpg",
+    features: [
+      "Event banquet halls",
+      "Landscaped outdoor areas",
+      "Luxury guest accommodations",
+      "Photography zones",
+      "In-house catering support",
+      "Exclusive private access",
+    ],
+    status: "upcoming",
+    location: "Dhaka, Bangladesh",
+    completionDate: "2026",
+  },
+  {
+slug: "purbayan-pyramid",
+    title: "Purbayan City Pyramid Super Shop",
+    description:
+      "A modern retail center for groceries, lifestyle goods, and daily essentials.",
+    fullDescription:
+      "Pyramid Super Shop is a comprehensive shopping destination within Purbayan City offering residents a wide variety of products from groceries to electronics. With its clean layout and modern design, it ensures a hassle-free shopping experience for all.",
+    image: "https://i.ibb.co/HDQS44Qr/SUPER.jpg",
+    features: [
+      "Wide range of products",
+      "Modern checkout system",
+      "Air-conditioned shopping halls",
+      "Ample parking space",
+      "CCTV security",
+      "Wheelchair access",
+    ],
+    status: "upcoming",
+    location: "Dhaka, Bangladesh",
+    completionDate: "2025",
+  },
+  {
+slug: "purbayan-city-park",
+    title: "Purbayan City Central Park",
+    description:
+      "A beautifully designed central park for leisure and community gatherings.",
+    fullDescription:
+      "Purbayan City Central Park is a thoughtfully planned green zone in the heart of the development. It features walking trails, seating areas, children’s play zones, and open-air event spaces, making it the recreational centerpiece of the community.",
+    image: "/CENTRAL-PARK-project1.PNG",
+    features: [
+      "Jogging and walking tracks",
+      "Children’s play area",
+      "Open-air amphitheater",
+      "Water fountains",
+      "Botanical landscaping",
+      "Yoga & meditation zones",
+    ],
+    status: "upcoming",
+    location: "Dhaka, Bangladesh",
+    completionDate: "2025",
+  },
+  {
+    slug: "purbayan-football-turf",
+    title: "Purbayan City Football Turf",
+    description:
+      "A professional-grade football turf for sports and recreation.",
+    fullDescription:
+      "Purbayan City Football Turf is a modern synthetic field built to support both amateur and professional matches. Equipped with night lighting and spectator seating, it promotes healthy lifestyles and encourages youth participation in sports.",
+    image: "https://i.ibb.co/Cph9zWgs/Purbayan-City-Football-turf.jpg",
+    features: [
+      "Standard-sized turf ground",
+      "LED flood lighting",
+      "Changing rooms",
+      "Cafeteria and sitting area",
+      "Booking system for events",
+      "Youth training facilities",
+    ],
+    status: "upcoming",
+    location: "Dhaka, Bangladesh",
+    completionDate: "2024",
+  },
+  {
+     slug: "PURBAYAN-Coffee",
+    title: "Purbayan City Library & Coffee Shop",
+    description:
+      "A cozy space for learning and relaxing with books and coffee.",
+    fullDescription:
+      "The Library & Coffee Shop blends learning with leisure in a calm, well-lit environment. Whether you want to study, read, or socialize over coffee, this space caters to students, freelancers, and families looking for quiet time.",
+    image: "https://i.ibb.co/9kQBS6H3/Library-Coffee-Shop.jpg",
+    features: [
+      "Curated book collection",
+      "Reading zones & booths",
+      "Premium coffee & snacks",
+      "High-speed Wi-Fi",
+      "Community events & book clubs",
+      "Indoor plants & acoustic comfort",
+    ],
+    status: "upcoming",
+    location: "Dhaka, Bangladesh",
+    completionDate: "2024",
+  },
+  {
+     slug: "purbayan-commercial-hub",
+    title: "Purbayan City Commercial Hub",
+    description:
+      "A business hub with office spaces, shops, and corporate facilities.",
+    fullDescription:
+      "The Commercial Hub of Purbayan City serves as the economic heart of the project. With its modern office spaces, retail outlets, and business-friendly amenities, it supports startups, service providers, and enterprises looking to thrive in a vibrant setting.",
+    image: "/CLUB-HOUSE-project2.PNG",
+    features: [
+      "Office spaces & showrooms",
+      "Conference and meeting rooms",
+      "High-speed elevators",
+      "24/7 power backup",
+      "CCTV surveillance",
+      "Business lounge & food court",
+    ],
+    status: "upcoming",
+    location: "Dhaka, Bangladesh",
+    completionDate: "2025",
+  },
+  {
+    slug: "purbayan-waterfront",
+    title: "Purbayan City Medical College Hospital",
+    description:
+      "A top-tier medical college and hospital serving health and education needs.",
+    fullDescription:
+      "The Medical College Hospital at Purbayan City is being developed to provide advanced medical education alongside specialized healthcare services. With modern facilities, emergency care, and experienced professionals, it aims to serve both residents and the wider community.",
+    image: "/MEDICAL COLLEGE HOSPITAL-project4.PNG",
+    features: [
+      "Fully equipped hospital wards",
+      "Medical college campus",
+      "Emergency & trauma center",
+      "Pharmacy & diagnostics",
+      "Ambulance services",
+      "Staff accommodations",
+    ],
+    status: "upcoming",
+    location: "Dhaka, Bangladesh",
+    completionDate: "2026",
+  },
+];
 
 type Props = {
   params: { slug: string }
 }
 
+// console.log(params);
+
 // Dynamic metadata generation
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
   const project = projects.find((p) => p.slug === params.slug)
 
   if (!project) {
     return {
-      title: "Project Not Found | Purbayan Properties Limited",
-      description: "The requested project could not be found.",
+      title: "Project Not Found",
+      description: "The project you are looking for does not exist.",
     }
   }
 
-  const ogImageUrl = `https://purbayanbd.com/api/og?title=${encodeURIComponent(project.title)}&description=${encodeURIComponent(project.description)}&type=project`
-
   return {
-    title: `${project.title} | Purbayan Properties Limited`,
+    title: project.title,
     description: project.description,
-    alternates: {
-      canonical: `https://purbayanbd.com/projects/${params.slug}`,
-    },
-    openGraph: {
-      title: `${project.title} | Purbayan Properties Limited`,
-      description: project.description,
-      url: `https://purbayanbd.com/projects/${params.slug}`,
-      siteName: "Purbayan Properties Limited",
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: project.title,
-        },
-      ],
-      locale: "en_US",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${project.title} | Purbayan Properties Limited`,
-      description: project.description,
-      images: [ogImageUrl],
-    },
   }
 }
 
