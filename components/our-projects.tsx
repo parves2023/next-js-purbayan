@@ -26,90 +26,89 @@ interface Project {
 export default function OurProjects() {
   const [activeTab, setActiveTab] = useState("all");
 
-  const projects: Project[] = [
-    {
-      id: "project-1",
-      title: "Purbayan City Duplex Zone",
-      description:
-        "Eco-friendly residential development with lush green surroundings.",
-      image: "/DUPLEX-ZONE-project3.PNG",
-      category: "residential",
-      status: "upcoming",
-      slug: "purbayan-green-valley",
-    },
-    {
-      id: "project-2",
-      title: "Purbayan City Destination Wedding Project",
-      description:
-        "Eco-friendly residential development with lush green surroundings.",
-      image: "/DUPLEX-ZONE-project3.PNG",
-      category: "residential",
-      status: "upcoming",
-      slug: "purbayan-green-valley",
-    },
-    {
-      id: "project-3",
-      title: "Purbayan City Pyramid Super Shop",
-      description:
-        "Eco-friendly residential development with lush green surroundings.",
-      image: "/DUPLEX-ZONE-project3.PNG",
-      category: "residential",
-      status: "upcoming",
-      slug: "purbayan-green-valley",
-    },
-    {
-      id: "project-4",
-      title: "Purbayan City Central Park",
-      description:
-        "Premium residential plots with modern infrastructure and amenities.",
-      image: "/CENTRAL-PARK-project1.PNG",
-      category: "residential",
-      status: "upcoming",
-      slug: "purbayan-city-phase-1",
-    },
-    {
-      id: "project-5",
-      title: "PURBAYAN CITY FOOTBALL TURF",
-      description:
-        "Modern office spaces designed for productivity and collaboration.",
-      image: "https://i.ibb.co/Cph9zWgs/Purbayan-City-Football-turf.jpg",
-      category: "commercial",
-      status: "upcoming",
-      slug: "PURBAYAN-FOOTBALL-PARK",
-    },
-    {
-      id: "project-6",
-      title: "Purbayan City Library & Coffee Shop",
-      description:
-        "Modern office spaces designed for productivity and collaboration.",
-      image: "https://i.ibb.co/Cph9zWgs/Purbayan-City-Football-turf.jpg",
-      category: "commercial",
-      status: "upcoming",
-      slug: "PURBAYAN-FOOTBALL-PARK",
-    },
+const projects: Project[] = [
+  {
+    id: "project-1",
+    title: "Purbayan City Duplex Zone",
+    description:
+      "A modern residential zone featuring stylish duplex houses designed for family living, offering privacy, space, and comfort in a green environment.",
+    image: "/DUPLEX-ZONE-project3.PNG",
+    category: "residential",
+    status: "upcoming",
+    slug: "purbayan-green-valley",
+  },
+  {
+    id: "project-2",
+    title: "Purbayan City Destination Wedding Project",
+    description:
+      "A luxurious venue tailored for destination weddings, combining natural beauty with top-tier facilities for a memorable celebration experience.",
+    image: "https://i.ibb.co/d4chkYcZ/Destination-Wedding-Resort.jpg",
+    category: "residential",
+    status: "upcoming",
+    slug: "purbayan-green-valley",
+  },
+  {
+    id: "project-3",
+    title: "Purbayan City Pyramid Super Shop",
+    description:
+      "A modern retail center offering a wide range of daily necessities, groceries, and lifestyle products for Purbayan City residents and visitors.",
+    image: "https://i.ibb.co/HDQS44Qr/SUPER.jpg",
+    category: "residential",
+    status: "upcoming",
+    slug: "purbayan-green-valley",
+  },
+  {
+    id: "project-4",
+    title: "Purbayan City Central Park",
+    description:
+      "A sprawling central park designed for leisure and recreation, featuring walkways, greenery, and community gathering spaces.",
+    image: "/CENTRAL-PARK-project1.PNG",
+    category: "residential",
+    status: "upcoming",
+    slug: "purbayan-city-phase-1",
+  },
+  {
+    id: "project-5",
+    title: "PURBAYAN CITY FOOTBALL TURF",
+    description:
+      "A professional-grade football turf for sports lovers, promoting an active lifestyle and supporting local tournaments and training.",
+    image: "https://i.ibb.co/Cph9zWgs/Purbayan-City-Football-turf.jpg",
+    category: "commercial",
+    status: "upcoming",
+    slug: "PURBAYAN-FOOTBALL-PARK",
+  },
+  {
+    id: "project-6",
+    title: "Purbayan City Library & Coffee Shop",
+    description:
+      "A cozy hub for readers and coffee enthusiasts, combining a peaceful reading environment with premium café service.",
+    image: "https://i.ibb.co/9kQBS6H3/Library-Coffee-Shop.jpg",
+    category: "commercial",
+    status: "upcoming",
+    slug: "PURBAYAN-FOOTBALL-PARK",
+  },
+  {
+    id: "project-7",
+    title: "PURBAYAN CITY COMMERCIAL HUB",
+    description:
+      "A centralized commercial space for businesses, retail outlets, and corporate offices—driving economic growth within Purbayan City.",
+    image: "/CLUB-HOUSE-project2.PNG",
+    category: "commercial",
+    status: "upcoming",
+    slug: "purbayan-commercial-hub",
+  },
+  {
+    id: "project-8",
+    title: "PURBAYAN CITY MEDICAL COLLEGE HOSPITAL",
+    description:
+      "A state-of-the-art medical college and hospital, offering advanced healthcare facilities and education within the city.",
+    image: "/MEDICAL COLLEGE HOSPITAL-project4.PNG",
+    category: "residential",
+    status: "upcoming",
+    slug: "purbayan-waterfront",
+  },
+];
 
-    {
-      id: "project-7",
-      title: "PURBAYAN CITY COMMERCIAL HUB",
-      description:
-        "State-of-the-art commercial spaces for businesses and retail.",
-      image: "/CLUB-HOUSE-project2.PNG",
-      category: "commercial",
-      status: "upcoming",
-      slug: "purbayan-commercial-hub",
-    },
-
-    {
-      id: "project-4",
-      title: "PURBAYAN CITY MEDICAL COLLEGE HOSPITAL",
-      description:
-        "Exclusive waterfront properties with scenic views and premium amenities.",
-      image: "/MEDICAL COLLEGE HOSPITAL-project4.PNG",
-      category: "residential",
-      status: "upcoming",
-      slug: "purbayan-waterfront",
-    },
-  ];
 
   const filteredProjects =
     activeTab === "all"

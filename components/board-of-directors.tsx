@@ -27,7 +27,7 @@ const directors: Director[] = [
     id: "3",
     name: "Abu Sayer Choudhury",
     title: "Co-Chairman",
-    image: "https://i.ibb.co/Nnm1Dd7S/dummyimg.jpg",
+    image: "https://i.ibb.co/Rkf7w2n4/abu-sayed.jpg",
   },
   {
     id: "4",
@@ -53,12 +53,12 @@ const directors: Director[] = [
     title: "Deputy Managing Director",
     image: "https://i.ibb.co/k23nbTDp/deputy-managing-director.jpg",
   },
-  {
-    id: "8",
-    name: "Dewan Mohammad Shafiullah",
-    title: "Director",
-    image: "https://i.ibb.co/Nnm1Dd7S/dummyimg.jpg",
-  },
+  // {
+  //   id: "8",
+  //   name: "Dewan Mohammad Shafiullah",
+  //   title: "Director",
+  //   image: "https://i.ibb.co/Nnm1Dd7S/dummyimg.jpg",
+  // },
 ]
 
 export default function BoardOfDirectors() {
