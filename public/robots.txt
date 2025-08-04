@@ -1,0 +1,38 @@
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+
+# Allow media files
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.css$
+Allow: /*.js$
+
+# Special instructions for Google
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Special instructions for Google Images
+User-agent: Googlebot-Image
+Allow: /
+
+# Special instructions for Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://purbayanbd.com/sitemap.xml
